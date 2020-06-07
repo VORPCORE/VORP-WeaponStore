@@ -21,8 +21,8 @@ namespace vorpweaponstore_cl.Menus
             MenuController.EnableMenuToggleKeyOnController = false;
             MenuController.MenuToggleKey = (Control)0;
 
-            //Buy Menu
-            //MenuController.AddSubmenu(mainMenu, BuyMenu.GetMenu());
+            //Weapons Buy Menu
+            MenuController.AddSubmenu(mainMenu, BuyMenu.GetMenu());
 
             MenuItem subMenuBuyBtn = new MenuItem(GetConfig.Langs["MenuMainButtonBuyWeapons"], " ")
             {
@@ -30,7 +30,7 @@ namespace vorpweaponstore_cl.Menus
             };
 
             mainMenu.AddMenuItem(subMenuBuyBtn);
-            //MenuController.BindMenuItem(mainMenu, BuyMenu.GetMenu(), subMenuBuyBtn);
+            MenuController.BindMenuItem(mainMenu, BuyMenu.GetMenu(), subMenuBuyBtn);
 
 
             mainMenu.OnMenuClose += (_menu) =>
