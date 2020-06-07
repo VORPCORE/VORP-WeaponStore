@@ -30,7 +30,7 @@ namespace vorpweaponstore_cl
                 Langs[l.Key] = l.Value.ToString();
             }
 
-            //Init
+            weaponstore_init.InitStores();
         }
 
     }

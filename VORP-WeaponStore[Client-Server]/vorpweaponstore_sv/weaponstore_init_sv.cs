@@ -8,5 +8,6 @@ namespace vorpweaponstore_sv
 {
     public class weaponstore_init_sv 
     {
+
     }
 }

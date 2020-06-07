@@ -1,0 +1,15 @@
+{
+  "defaultlang": "Es", // set your language
+
+  "Stores": [
+    {
+      "name": "Armeria Saint Denis",
+      "NPCModel": "U_M_M_NbxGunsmith_01", //Kuo Chao
+      "BlipIcon": -145868367,
+      "EnterStore": [ 2716.12, -1285.5, 48.62, 1.0 ],
+      "CameraMain": [ 0, 0, 47.34337, 0, 0.0, 0 ],
+      "NPCStore": [ 2717.23, -1286.94, 48.63, 34.73 ],
+      "SpawnObjectStore": [ 2825.07, -1318.78, 46.81, 319.68 ]
+    }
+  ]
+}
