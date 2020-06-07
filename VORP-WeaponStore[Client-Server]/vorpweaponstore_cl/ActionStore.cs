@@ -39,5 +39,23 @@ namespace vorpweaponstore_cl
         }
 
 
+
+        public static async Task ExitBuyStore()
+        {
+            await Delay(100);
+            if (!MenuController.IsAnyMenuOpen())
+            {
+                TriggerEvent("vorp:setInstancePlayer", false);
+                NetworkSetInSpectatorMode(false, PlayerPedId());
+                FreezeEntityPosition(PlayerPedId(), false);
+                SetEntityVisible(PlayerPedId(), true);
+                SetCamActive(CamStore, false);
+                RenderScriptCams(false, true, 1000, true, true, 0);
+                DestroyCam(CamStore, true);
+
+                DeleteObject(ref ObjectStore);
+            }
+
+        }
     }
 }
