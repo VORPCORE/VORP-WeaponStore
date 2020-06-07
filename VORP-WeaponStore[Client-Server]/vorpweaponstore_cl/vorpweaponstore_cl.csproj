@@ -57,6 +57,7 @@
     <Compile Include="ActionStore.cs" />
     <Compile Include="ClearCaches.cs" />
     <Compile Include="GetConfig.cs" />
+    <Compile Include="Menus\BuyMenu.cs" />
     <Compile Include="Menus\MainMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="weaponstore_init.cs" />
