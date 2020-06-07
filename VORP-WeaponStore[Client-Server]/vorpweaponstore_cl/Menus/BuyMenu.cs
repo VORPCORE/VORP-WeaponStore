@@ -29,7 +29,6 @@ namespace vorpweaponstore_cl.Menus
 
             MenuController.AddSubmenu(buyMenu, buyMenuConfirm);
 
-
             foreach (var weapon in GetConfig.Config["Weapons"])
             {
                 MenuItem _weaponToBuy = new MenuItem(weapon["Name"].ToString() + " $" + weapon["Price"].ToString(), "")
@@ -53,11 +52,11 @@ namespace vorpweaponstore_cl.Menus
             buyMenuConfirm.AddMenuItem(subMenuConfirmBuyBtnYes);
             buyMenuConfirm.AddMenuItem(subMenuConfirmBuyBtnNo);
 
-            buyMenu.OnListItemSelect += (_menu, _listItem, _listIndex, _itemIndex) =>
+            buyMenu.OnItemSelect += (_menu, _item, _index) =>
             {
-                indexItem = _itemIndex;
-                double totalPrice = double.Parse(GetConfig.Config["Weapons"][_itemIndex]["Price"].ToString());
-                buyMenuConfirm.MenuTitle = GetConfig.Config["Weapons"][_itemIndex]["Name"].ToString();
+                indexItem = _index;
+                double totalPrice = double.Parse(GetConfig.Config["Weapons"][_index]["Price"].ToString());
+                buyMenuConfirm.MenuTitle = GetConfig.Config["Weapons"][_index]["Name"].ToString();
                 subMenuConfirmBuyBtnYes.Label = string.Format(GetConfig.Langs["MenuBuyWeaponsButtonYes"], totalPrice.ToString());
             };
 
