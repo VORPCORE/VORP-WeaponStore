@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MenuAPI;
 
 namespace vorpweaponstore_cl
 {
@@ -21,7 +22,7 @@ namespace vorpweaponstore_cl
         public static async Task InitStores()
         {
             await Delay(10000);
-
+            Menus.MainMenu.GetMenu();
             foreach (var store in GetConfig.Config["Stores"])
             {
                 string ped = store["NPCModel"].ToString();
