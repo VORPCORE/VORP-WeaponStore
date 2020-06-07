@@ -39,18 +39,66 @@ namespace vorpweaponstore_cl
             MenuController.MainMenu.OpenMenu();
         }
 
+        static List<string> comps = new List<string>() {
+            "barrel1",
+            "barrel2",
+            "barrel01",
+            "barrel02",
+            "grip1",
+            "grip2",
+            "grip3",
+            "grip4",
+            "grip5",
+            "sight1",
+            "sight2",
+            "clip",
+            "clip1",
+            "wrap1",
+            "mag1",
+            "mag2",
+            "mag3",
+            "w_repeater_pumpaction01_barrel1",
+            "w_repeater_pumpaction01_barrel2",
+            "w_repeater_pumpaction01_barrel01",
+            "w_repeater_pumpaction01_barrel02",
+            "w_repeater_pumpaction01_grip1",
+            "w_repeater_pumpaction01_grip2",
+            "w_repeater_pumpaction01_sight1",
+            "w_repeater_pumpaction01_clip",
+            "w_repeater_pumpaction01_clip1",
+            "w_repeater_pumpaction01_wrap1",
+            "w_repeater_pumpaction01_mag1",
+            "w_repeater_pumpaction01_mag2",
+            "w_repeater_pumpaction01_rear01",
+            "w_rifle_scopeinner01",
+            "w_rifle_scope04",
+            "w_rifle_scope03",
+            "w_rifle_scope02",
+            "w_rifle_cs_strap01",
+            "w_sight_rear02",
+            "w_sight_rear01",
+            "w_repeater_cloth_strap01",
+            "w_repeater_strap01",
+            "w_rifle_boltaction03_grip1"
+        };
+
         public static async Task CreateObjectOnTable(int index, string list)
         {
+
             DeleteObject(ref ObjectStore);
             float objectX = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][0].ToString());
             float objectY = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][1].ToString());
             float objectZ = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][2].ToString());
             float objectH = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][3].ToString());
-            uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString());
+            uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["HashName"].ToString());
+            foreach(string c in comps)
+            {
+                await weaponstore_init.LoadModel((uint)GetHashKey(c));
+            }
             await weaponstore_init.LoadModel(idObject);
-            ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
+            //ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
             SetModelAsNoLongerNeeded(idObject);
-            //ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, idObject, 10, objectX, objectY, objectZ, true, objectH);
+            ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, idObject, 0, objectX, objectY, objectZ, false, 1.0);
         }
 
         public static async Task ExitBuyStore()
