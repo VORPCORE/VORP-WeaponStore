@@ -19,12 +19,12 @@
       "HashName": "WEAPON_RIFLE_VARMINT",
       "WeaponModel": "w_repeater_pumpaction01",
       "Price": 100.0,
-      "AmmoHash": [
+      "AmmoHash": [ //Ammo quantity has on buy this weapon
         {
-          "AMMO_REPEATER": 0.6,
-          "AMMO_REPEATER_EXPRESS": 1.2,
-          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 2.0,
-          "AMMO_REPEATER_HIGH_VELOCITY":  2.5
+          "AMMO_REPEATER": 10,
+          "AMMO_REPEATER_EXPRESS": 0,
+          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0,
+          "AMMO_REPEATER_HIGH_VELOCITY":  0
         }
       ]
     }
