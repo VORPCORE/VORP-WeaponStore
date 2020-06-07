@@ -62,12 +62,12 @@ namespace vorpweaponstore_cl.Menus
 
             buyMenu.OnIndexChange += (_menu, _oldItem, _newItem, _oldIndex, _newIndex) =>
             {
-                ActionStore.CreateObjectOnTable(_newIndex, "Weapons");
+                ActionStore.CreateObjectOnTable(_newIndex, "Weapons", ActionStore.ObjectStore);
             };
 
             buyMenu.OnMenuOpen += (_menu) =>
             {
-                ActionStore.CreateObjectOnTable(_menu.CurrentIndex, "Weapons");
+                ActionStore.CreateObjectOnTable(_menu.CurrentIndex, "Weapons", ActionStore.ObjectStore);
             };
 
             buyMenuConfirm.OnItemSelect += (_menu, _item, _index) =>

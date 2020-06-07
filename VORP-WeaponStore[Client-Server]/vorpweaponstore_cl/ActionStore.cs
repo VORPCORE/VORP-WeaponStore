@@ -12,7 +12,7 @@ namespace vorpweaponstore_cl
 {
     public class ActionStore : BaseScript
     {
-        private static int ObjectStore;
+        public static int ObjectStore;
         private static int CamStore;
         private static int LaststoreId;
         public static async Task EnterBuyStore(int storeId)
@@ -39,7 +39,7 @@ namespace vorpweaponstore_cl
             MenuController.MainMenu.OpenMenu();
         }
 
-        static List<string> comps = new List<string>() {
+        static List<string> compsSuffix = new List<string>() {
             "barrel1",
             "barrel2",
             "barrel01",
@@ -53,52 +53,34 @@ namespace vorpweaponstore_cl
             "sight2",
             "clip",
             "clip1",
+            "clip2",
+            "clip3",
             "wrap1",
+            "wrap2",
+            "wrap3",
             "mag1",
             "mag2",
-            "mag3",
-            "w_repeater_pumpaction01_barrel1",
-            "w_repeater_pumpaction01_barrel2",
-            "w_repeater_pumpaction01_barrel01",
-            "w_repeater_pumpaction01_barrel02",
-            "w_repeater_pumpaction01_grip1",
-            "w_repeater_pumpaction01_grip2",
-            "w_repeater_pumpaction01_sight1",
-            "w_repeater_pumpaction01_clip",
-            "w_repeater_pumpaction01_clip1",
-            "w_repeater_pumpaction01_wrap1",
-            "w_repeater_pumpaction01_mag1",
-            "w_repeater_pumpaction01_mag2",
-            "w_repeater_pumpaction01_rear01",
-            "w_rifle_scopeinner01",
-            "w_rifle_scope04",
-            "w_rifle_scope03",
-            "w_rifle_scope02",
-            "w_rifle_cs_strap01",
-            "w_sight_rear02",
-            "w_sight_rear01",
-            "w_repeater_cloth_strap01",
-            "w_repeater_strap01",
-            "w_rifle_boltaction03_grip1"
+            "mag3"
         };
 
-        public static async Task CreateObjectOnTable(int index, string list)
+        public static async Task CreateObjectOnTable(int index, string list, int LastObjectStore)
         {
-
-            DeleteObject(ref ObjectStore);
+            await Delay(10);
+            DeleteObject(ref LastObjectStore);
             float objectX = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][0].ToString());
             float objectY = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][1].ToString());
             float objectZ = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][2].ToString());
             float objectH = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][3].ToString());
-            uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["HashName"].ToString());
-            foreach(string c in comps)
+            uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString());
+
+            foreach (string c in compsSuffix)
             {
-                await weaponstore_init.LoadModel((uint)GetHashKey(c));
+                weaponstore_init.LoadModel((uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString() + "_" + c));
             }
-            await weaponstore_init.LoadModel(idObject);
+            weaponstore_init.LoadModel(idObject);
             //ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
-            SetModelAsNoLongerNeeded(idObject);
-            ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, idObject, 0, objectX, objectY, objectZ, false, 1.0);
+            //SetModelAsNoLongerNeeded(idObject);
+            ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, GetHashKey(GetConfig.Config[list][index]["HashName"].ToString()), 0, objectX, objectY, objectZ, true, 1.0);
         }
 
         public static async Task ExitBuyStore()
