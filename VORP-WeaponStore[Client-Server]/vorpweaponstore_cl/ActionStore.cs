@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static CitizenFX.Core.Native.API;
 using MenuAPI;
+using CitizenFX.Core.Native;
 
 namespace vorpweaponstore_cl
 {
@@ -48,6 +49,8 @@ namespace vorpweaponstore_cl
             uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString());
             await weaponstore_init.LoadModel(idObject);
             ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
+            SetModelAsNoLongerNeeded(idObject);
+            //ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, idObject, 10, objectX, objectY, objectZ, true, objectH);
         }
 
         public static async Task ExitBuyStore()

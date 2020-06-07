@@ -24,9 +24,16 @@
           "AMMO_REPEATER": 10,
           "AMMO_REPEATER_EXPRESS": 0,
           "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REPEATER_HIGH_VELOCITY":  0
+          "AMMO_REPEATER_HIGH_VELOCITY": 0
         }
       ]
+    },
+    {
+      "Name": "Cuchillo Normal",
+      "HashName": "WEAPON_MELEE_KNIFE",
+      "WeaponModel": "w_melee_knife02",
+      "Price": 100.0,
+      "AmmoHash": [ ]
     }
   ]
 
