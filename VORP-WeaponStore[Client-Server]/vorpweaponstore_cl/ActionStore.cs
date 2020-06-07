@@ -38,7 +38,17 @@ namespace vorpweaponstore_cl
             MenuController.MainMenu.OpenMenu();
         }
 
-
+        public static async Task CreateObjectOnTable(int index, string list)
+        {
+            DeleteObject(ref ObjectStore);
+            float objectX = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][0].ToString());
+            float objectY = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][1].ToString());
+            float objectZ = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][2].ToString());
+            float objectH = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][3].ToString());
+            uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["ObjectModel"].ToString());
+            await weaponstore_init.LoadModel(idObject);
+            ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
+        }
 
         public static async Task ExitBuyStore()
         {
