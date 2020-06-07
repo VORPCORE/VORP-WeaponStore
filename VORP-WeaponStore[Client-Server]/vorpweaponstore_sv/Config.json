@@ -11,5 +11,23 @@
       "NPCStore": [ 2717.23, -1286.94, 48.63, 34.73 ],
       "SpawnObjectStore": [ 2716.71, -1286.26, 49.68, 24.94 ]
     }
+  ],
+
+  "Weapons": [
+    {
+      "Name": "Rifle Varmint",
+      "HashName": "WEAPON_RIFLE_VARMINT",
+      "WeaponModel": "w_repeater_pumpaction01",
+      "BuyPrice": 100.0,
+      "AmmoHash": [
+        {
+          "AMMO_REPEATER": 0.6,
+          "AMMO_REPEATER_EXPRESS": 1.2,
+          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 2.0,
+          "AMMO_REPEATER_HIGH_VELOCITY":  2.5
+        }
+      ]
+    }
   ]
+
 }
