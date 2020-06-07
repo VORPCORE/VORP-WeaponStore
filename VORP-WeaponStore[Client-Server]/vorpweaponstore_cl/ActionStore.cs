@@ -14,6 +14,30 @@ namespace vorpweaponstore_cl
         private static int ObjectStore;
         private static int CamStore;
         private static int LaststoreId;
+        public static async Task EnterBuyStore(int storeId)
+        {
+            LaststoreId = storeId;
+            float Camerax = float.Parse(GetConfig.Config["Stores"][storeId]["CameraMain"][0].ToString());
+            float Cameray = float.Parse(GetConfig.Config["Stores"][storeId]["CameraMain"][1].ToString());
+            float Cameraz = float.Parse(GetConfig.Config["Stores"][storeId]["CameraMain"][2].ToString());
+            float CameraRotx = float.Parse(GetConfig.Config["Stores"][storeId]["CameraMain"][3].ToString());
+            float CameraRoty = float.Parse(GetConfig.Config["Stores"][storeId]["CameraMain"][4].ToString());
+            float CameraRotz = float.Parse(GetConfig.Config["Stores"][storeId]["CameraMain"][5].ToString());
+
+            TriggerEvent("vorp:setInstancePlayer", true);
+            NetworkSetInSpectatorMode(true, PlayerPedId());
+            FreezeEntityPosition(PlayerPedId(), true);
+            SetEntityVisible(PlayerPedId(), false);
+
+            CamStore = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA", Camerax, Cameray, Cameraz, CameraRotx, CameraRoty, CameraRotz, 50.00f, false, 0);
+            SetCamActive(CamStore, true);
+            RenderScriptCams(true, true, 500, true, true, 0);
+
+            MenuController.MainMenu.MenuTitle = GetConfig.Config["Stores"][storeId]["name"].ToString();
+
+            MenuController.MainMenu.OpenMenu();
+        }
+
 
     }
 }
