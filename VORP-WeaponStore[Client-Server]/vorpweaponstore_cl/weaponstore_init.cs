@@ -10,7 +10,6 @@ namespace vorpweaponstore_cl
 {
     class weaponstore_init : BaseScript
     {
-
         public static List<int> StoreBlips = new List<int>();
         public static List<int> StorePeds = new List<int>();
 
