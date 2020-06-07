@@ -18,7 +18,7 @@
       "Name": "Rifle Varmint",
       "HashName": "WEAPON_RIFLE_VARMINT",
       "WeaponModel": "w_repeater_pumpaction01",
-      "BuyPrice": 100.0,
+      "Price": 100.0,
       "AmmoHash": [
         {
           "AMMO_REPEATER": 0.6,

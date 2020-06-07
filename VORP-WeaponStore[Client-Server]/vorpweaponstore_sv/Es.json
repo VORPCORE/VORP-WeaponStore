@@ -1,5 +1,8 @@
 {
   "PressToOpen": "Pulsa [~e~Espacio~q~] para acceder a la armeria",
   "MenuMainDesc": "Compra armas, munición y mejoras",
-  "MenuMainButtonBuyWeapons":  "Comprar Armas"
+  "MenuMainButtonBuyWeapons": "Comprar Armas",
+  "MenuBuyWeaponsDesc": "Confirmar la compra",
+  "MenuBuyWeaponsButtonNo": "Volver",
+  "MenuBuyWeaponsButtonYes":  "Comprar por {0}"
 }
