@@ -45,7 +45,7 @@ namespace vorpweaponstore_cl
             float objectY = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][1].ToString());
             float objectZ = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][2].ToString());
             float objectH = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][3].ToString());
-            uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["ObjectModel"].ToString());
+            uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString());
             await weaponstore_init.LoadModel(idObject);
             ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
         }
