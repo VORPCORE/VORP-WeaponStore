@@ -40,11 +40,11 @@ namespace vorpweaponstore_cl.Menus
                 MenuController.BindMenuItem(buyMenu, buyMenuConfirm, _weaponToBuy);
             }
 
-            MenuItem subMenuConfirmBuyBtnYes = new MenuItem("", " ")
+            MenuItem subMenuConfirmBuyBtnYes = new MenuItem("", "")
             {
                 RightIcon = MenuItem.Icon.TICK
             };
-            MenuItem subMenuConfirmBuyBtnNo = new MenuItem(GetConfig.Langs["MenuBuyWeaponsButtonNo"], " ")
+            MenuItem subMenuConfirmBuyBtnNo = new MenuItem(GetConfig.Langs["MenuBuyWeaponsButtonNo"], "")
             {
                 RightIcon = MenuItem.Icon.ARROW_LEFT
             };
@@ -74,7 +74,7 @@ namespace vorpweaponstore_cl.Menus
             {
                 if (_index == 0)
                 {
-                    //StoreActions.BuyItemStore(indexItem, quantityItem);
+                    ActionStore.BuyWeaponStore(indexItem);
                     buyMenu.OpenMenu();
                     buyMenuConfirm.CloseMenu();
                 }

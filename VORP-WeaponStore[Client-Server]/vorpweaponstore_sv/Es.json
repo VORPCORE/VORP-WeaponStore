@@ -4,5 +4,7 @@
   "MenuMainButtonBuyWeapons": "Comprar Armas",
   "MenuBuyWeaponsDesc": "Confirmar la compra",
   "MenuBuyWeaponsButtonNo": "Volver",
-  "MenuBuyWeaponsButtonYes":  "Comprar por {0}$"
+  "MenuBuyWeaponsButtonYes": "Comprar por {0}$",
+  "YouBoughtWeapon": "Has comprado {0} por {1}$",
+  "NoMoney":  "No tienes suficiente dinero"
 }

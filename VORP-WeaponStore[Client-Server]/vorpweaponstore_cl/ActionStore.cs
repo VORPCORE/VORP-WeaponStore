@@ -107,5 +107,10 @@ namespace vorpweaponstore_cl
             }
 
         }
+
+        public static async Task BuyWeaponStore(int index)
+        {
+            TriggerServerEvent("vorpweaponstore:BuyWeapon", index);
+        }
     }
 }
