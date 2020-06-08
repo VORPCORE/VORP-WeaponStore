@@ -12,6 +12,7 @@ namespace vorpweaponstore_cl.Menus
     {
         private static Menu manageMenu = new Menu(GetConfig.Langs["MenuMainButtonManageWeapon"], "");
         private static bool setupDone = false;
+
         private static void SetupMenu()
         {
             if (setupDone) return;
@@ -21,8 +22,7 @@ namespace vorpweaponstore_cl.Menus
             MenuController.EnableMenuToggleKeyOnController = false;
             MenuController.MenuToggleKey = (Control)0;
 
-
-
+            //TODO: Crear el SubMenu y bindearlo a cada arma
 
             manageMenu.OnItemSelect += (_menu, _item, _index) =>
             {
