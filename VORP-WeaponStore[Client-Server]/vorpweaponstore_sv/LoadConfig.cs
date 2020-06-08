@@ -21,6 +21,8 @@ namespace vorpweaponstore_sv
         {
             EventHandlers[$"{API.GetCurrentResourceName()}:getConfig"] += new Action<Player>(getConfig);
 
+            EventHandlers[$"{API.GetCurrentResourceName()}:getWeapons"] += new Action<Player>(getWeapons);
+
             LoadConfigAndLang();
         }
 
@@ -45,6 +47,19 @@ namespace vorpweaponstore_sv
             {
                 Debug.WriteLine($"{API.GetCurrentResourceName()}: Config.json Not Found");
             }
+        }
+
+        private void getWeapons([FromSource]Player source)
+        {
+            int _source = int.Parse(source.Handle);
+            TriggerEvent("vorpCore:getUserWeapon", _source, new Action<dynamic>((weapons) =>
+            {
+                foreach (var w in weapons)
+                {
+                    Debug.WriteLine(w.name);
+                }
+            }));
+            //source.TriggerEvent($"{API.GetCurrentResourceName()}:SendWeapons");
         }
 
         private void getConfig([FromSource]Player source)

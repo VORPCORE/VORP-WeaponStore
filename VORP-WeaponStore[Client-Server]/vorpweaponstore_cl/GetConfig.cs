@@ -19,6 +19,7 @@ namespace vorpweaponstore_cl
         {
             EventHandlers[$"{API.GetCurrentResourceName()}:SendConfig"] += new Action<string, ExpandoObject>(LoadDefaultConfig);
             TriggerServerEvent($"{API.GetCurrentResourceName()}:getConfig");
+            TriggerServerEvent($"{API.GetCurrentResourceName()}:getWeapons");
         }
 
         private void LoadDefaultConfig(string dc, ExpandoObject dl)
