@@ -12,5 +12,10 @@
   "MenuBuyAmmoButtonNo": "Volver",
   "MenuBuyAmmoButtonYes": "Comprar por {0}$",
 
+  "MenuMainButtonManageWeapon": "Gestionar Armamento",
+  "MenuManageWeaponDesc": "Gestiona tus armas",
+  //"MenuManageWeaponButtonNo": "Volver",
+  //"MenuManageWeaponButtonYes": "Comprar por {0}$",
+
   "NoMoney": "No tienes suficiente dinero"
 }

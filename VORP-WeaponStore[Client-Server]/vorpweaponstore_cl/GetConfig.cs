@@ -14,10 +14,12 @@ namespace vorpweaponstore_cl
     {
         public static JObject Config = new JObject();
         public static Dictionary<string, string> Langs = new Dictionary<string, string>();
+        public static JArray PlayerWeapons = new JArray();
 
         public GetConfig()
         {
             EventHandlers[$"{API.GetCurrentResourceName()}:SendConfig"] += new Action<string, ExpandoObject>(LoadDefaultConfig);
+            EventHandlers[$"{API.GetCurrentResourceName()}:SendWeapons"] += new Action<string>(LoadPlayerWeapons);
             TriggerServerEvent($"{API.GetCurrentResourceName()}:getConfig");
             TriggerServerEvent($"{API.GetCurrentResourceName()}:getWeapons");
         }
@@ -32,6 +34,11 @@ namespace vorpweaponstore_cl
             }
 
             weaponstore_init.InitStores();
+        }
+
+        private void LoadPlayerWeapons(string w)
+        {
+            PlayerWeapons = JArray.Parse(w);
         }
 
     }

@@ -40,30 +40,6 @@ namespace vorpweaponstore_cl
             MenuController.MainMenu.OpenMenu();
         }
 
-        static List<string> compsSuffix = new List<string>() {
-            "barrel1",
-            "barrel2",
-            "barrel01",
-            "barrel02",
-            "grip1",
-            "grip2",
-            "grip3",
-            "grip4",
-            "grip5",
-            "sight1",
-            "sight2",
-            "clip",
-            "clip1",
-            "clip2",
-            "clip3",
-            "wrap1",
-            "wrap2",
-            "wrap3",
-            "mag1",
-            "mag2",
-            "mag3"
-        };
-
         public static async Task CreateObjectOnTable(int index, string list, int LastObjectStore)
         {
             await Delay(10);
@@ -72,22 +48,44 @@ namespace vorpweaponstore_cl
             float objectY = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][1].ToString());
             float objectZ = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][2].ToString());
             float objectH = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][3].ToString());
-            uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString());
 
-
-            foreach (JObject c in GetConfig.Config[list][index]["CompsHash"].Children<JObject>())
+            if (list.Contains("Manage"))
             {
-                foreach (JProperty comp in c.Properties())
-                {
-                    Debug.WriteLine(comp.Name);
-                    weaponstore_init.LoadModel((uint)GetHashKey(comp.Name));
-                }
-            }
+                var myweap = GetConfig.PlayerWeapons.ElementAt(index);
+                var wp = GetConfig.Config["Weapons"].FirstOrDefault(x => x["HashName"].ToString().Contains(myweap["name"].ToString()));
+                uint idObject = (uint)GetHashKey(wp["WeaponModel"].ToString());
 
-            await weaponstore_init.LoadModel(idObject);
-            //ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
-            //SetModelAsNoLongerNeeded(idObject);
-            ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, GetHashKey(GetConfig.Config[list][index]["HashName"].ToString()), 0, objectX, objectY, objectZ, true, 1.0);
+                foreach (JObject c in wp["CompsHash"].Children<JObject>())
+                {
+                    foreach (JProperty comp in c.Properties())
+                    {
+                        weaponstore_init.LoadModel((uint)GetHashKey(comp.Name));
+                    }
+                }
+
+                await weaponstore_init.LoadModel(idObject);
+                //ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
+                //SetModelAsNoLongerNeeded(idObject);
+                ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, GetHashKey(wp["HashName"].ToString()), 0, objectX, objectY, objectZ, true, 1.0);
+            }
+            else
+            {
+                uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString());
+
+                foreach (JObject c in GetConfig.Config[list][index]["CompsHash"].Children<JObject>())
+                {
+                    foreach (JProperty comp in c.Properties())
+                    {
+                        weaponstore_init.LoadModel((uint)GetHashKey(comp.Name));
+                    }
+                }
+
+                await weaponstore_init.LoadModel(idObject);
+                //ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
+                //SetModelAsNoLongerNeeded(idObject);
+                ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, GetHashKey(GetConfig.Config[list][index]["HashName"].ToString()), 0, objectX, objectY, objectZ, true, 1.0);
+            }
+         
         }
 
         public static async Task ExitBuyStore()

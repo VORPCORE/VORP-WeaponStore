@@ -14,6 +14,7 @@ namespace vorpweaponstore_sv
     {
         public static JObject Config = new JObject();
         public static string ConfigString;
+        public static string jsonWeapons;
         public static Dictionary<string, string> Langs = new Dictionary<string, string>();
         public static string resourcePath = $"{API.GetResourcePath(API.GetCurrentResourceName())}";
 
@@ -52,14 +53,12 @@ namespace vorpweaponstore_sv
         private void getWeapons([FromSource]Player source)
         {
             int _source = int.Parse(source.Handle);
-            TriggerEvent("vorpCore:getUserWeapon", _source, new Action<dynamic>((weapons) =>
+            TriggerEvent("vorpCore:getUserWeapons", _source, new Action<dynamic>((weapons) =>
             {
-                foreach (var w in weapons)
-                {
-                    Debug.WriteLine(w.name);
-                }
+                jsonWeapons = JsonConvert.SerializeObject(weapons);
+                source.TriggerEvent($"{API.GetCurrentResourceName()}:SendWeapons", jsonWeapons);
             }));
-            //source.TriggerEvent($"{API.GetCurrentResourceName()}:SendWeapons");
+            
         }
 
         private void getConfig([FromSource]Player source)

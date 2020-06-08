@@ -59,6 +59,7 @@
     <Compile Include="GetConfig.cs" />
     <Compile Include="Menus\BuyMenu.cs" />
     <Compile Include="Menus\MainMenu.cs" />
+    <Compile Include="Menus\ManageWeaponsMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="weaponstore_init.cs" />
   </ItemGroup>

@@ -32,6 +32,16 @@ namespace vorpweaponstore_cl.Menus
             mainMenu.AddMenuItem(subMenuBuyBtn);
             MenuController.BindMenuItem(mainMenu, BuyMenu.GetMenu(), subMenuBuyBtn);
 
+            //Weapons Manage Menu
+            MenuController.AddSubmenu(mainMenu, ManageWeaponsMenu.GetMenu());
+
+            MenuItem subMenuManageBtn = new MenuItem(GetConfig.Langs["MenuMainButtonManageWeapon"], " ")
+            {
+                RightIcon = MenuItem.Icon.ARROW_RIGHT
+            };
+
+            mainMenu.AddMenuItem(subMenuManageBtn);
+            MenuController.BindMenuItem(mainMenu, ManageWeaponsMenu.GetMenu(), subMenuManageBtn);
 
             mainMenu.OnMenuClose += (_menu) =>
             {
