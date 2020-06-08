@@ -80,7 +80,7 @@ namespace vorpweaponstore_cl
                 foreach (JProperty comp in c.Properties())
                 {
                     Debug.WriteLine(comp.Name);
-                    weaponstore_init.LoadModel((uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString() + "_" + comp.Name));
+                    weaponstore_init.LoadModel((uint)GetHashKey(comp.Name));
                 }
             }
 
