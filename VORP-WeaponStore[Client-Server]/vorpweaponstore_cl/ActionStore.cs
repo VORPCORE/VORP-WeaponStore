@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using static CitizenFX.Core.Native.API;
 using MenuAPI;
 using CitizenFX.Core.Native;
+using Newtonsoft.Json.Linq;
 
 namespace vorpweaponstore_cl
 {
@@ -26,7 +27,7 @@ namespace vorpweaponstore_cl
             float CameraRotz = float.Parse(GetConfig.Config["Stores"][storeId]["CameraMain"][5].ToString());
 
             TriggerEvent("vorp:setInstancePlayer", true);
-            NetworkSetInSpectatorMode(true, PlayerPedId());
+            //NetworkSetInSpectatorMode(true, PlayerPedId());
             FreezeEntityPosition(PlayerPedId(), true);
             SetEntityVisible(PlayerPedId(), false);
 
@@ -73,11 +74,17 @@ namespace vorpweaponstore_cl
             float objectH = float.Parse(GetConfig.Config["Stores"][LaststoreId]["SpawnObjectStore"][3].ToString());
             uint idObject = (uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString());
 
-            foreach (string c in compsSuffix)
+
+            foreach (JObject c in GetConfig.Config[list][index]["CompsHash"].Children<JObject>())
             {
-                weaponstore_init.LoadModel((uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString() + "_" + c));
+                foreach (JProperty comp in c.Properties())
+                {
+                    Debug.WriteLine(comp.Name);
+                    weaponstore_init.LoadModel((uint)GetHashKey(GetConfig.Config[list][index]["WeaponModel"].ToString() + "_" + comp.Name));
+                }
             }
-            weaponstore_init.LoadModel(idObject);
+
+            await weaponstore_init.LoadModel(idObject);
             //ObjectStore = CreateObject(idObject, objectX, objectY, objectZ, false, true, true, true, true);
             //SetModelAsNoLongerNeeded(idObject);
             ObjectStore = Function.Call<int>((Hash)0x9888652B8BA77F73, GetHashKey(GetConfig.Config[list][index]["HashName"].ToString()), 0, objectX, objectY, objectZ, true, 1.0);
@@ -89,7 +96,7 @@ namespace vorpweaponstore_cl
             if (!MenuController.IsAnyMenuOpen())
             {
                 TriggerEvent("vorp:setInstancePlayer", false);
-                NetworkSetInSpectatorMode(false, PlayerPedId());
+                //NetworkSetInSpectatorMode(false, PlayerPedId());
                 FreezeEntityPosition(PlayerPedId(), false);
                 SetEntityVisible(PlayerPedId(), true);
                 SetCamActive(CamStore, false);
