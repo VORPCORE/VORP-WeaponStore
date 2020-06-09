@@ -51,14 +51,13 @@ namespace vorpweaponstore_cl.Menus
                 }
 
                 string AmmoType = ammoType.ElementAt(_index).Key;
-
-                if (myWp["ammo"].Any(x => x.ToString().Contains(ammoType.ElementAt(_index).Key)))
+                string ammoSyntax = $"\"{AmmoType}\"";
+                if (myWp["ammo"].Any(x => x.ToString().Contains(ammoSyntax)))
                 {
-                    int ammoQ = myWp["ammo"].FirstOrDefault(x => x.ToString().Contains(AmmoType)).ToObject<int>();
+                    int ammoQ = myWp["ammo"].FirstOrDefault(x => x.ToString().Contains(ammoSyntax)).ToObject<int>();
                     if (ammoQ < GetConfig.Config["AmmoLimit"][0][AmmoType].ToObject<int>())
                     {
-                        int ammoActual = myWp["ammo"].FirstOrDefault(x => x.ToString().Contains(AmmoType)).ToObject<int>();
-                        int ammoNeeded = GetConfig.Config["AmmoLimit"][0][AmmoType].ToObject<int>() - ammoActual;
+                        int ammoNeeded = GetConfig.Config["AmmoLimit"][0][AmmoType].ToObject<int>() - ammoQ;
                         double cost = (double)ammoNeeded * ammoType.ElementAt(_index).Value;
                         ActionStore.RestockWeaponAmmo(myWp["id"].ToObject<int>(), cost, AmmoType, ammoNeeded);
                     }
@@ -85,16 +84,16 @@ namespace vorpweaponstore_cl.Menus
             manageAmmoMenu.OnMenuOpen += (_menu) =>
             {
                 var myWp = GetConfig.PlayerWeapons.ElementAt(ManageWeaponsMenu.indexItem);
-                var wpc = GetConfig.Config["Weapons"].FirstOrDefault(x => x["HashName"].ToString().Contains(myWp["name"].ToString()));
+                var wpc = GetConfig.Config["Weapons"].FirstOrDefault(x => x["HashName"].ToString().Equals(myWp["name"].ToString()));
 
                 foreach (JObject ammoc in wpc["AmmoHash"].Children<JObject>())
                 {
                     foreach (JProperty ammo in ammoc.Properties())
                     {
-                        if (myWp["ammo"].Any(x => x.ToString().Contains(ammo.Name.ToString())))
+                        string ammoSyntax = $"\"{ammo.Name}\"";
+                        if (myWp["ammo"].Any(x => x.ToString().Contains(ammoSyntax)))
                         {
-                            int ammoQ = myWp["ammo"].FirstOrDefault(x => x.ToString().Contains(ammo.Name.ToString())).ToObject<int>();
-                            Debug.WriteLine(ammo.Name.ToString() + " " + ammoQ.ToString());
+                            int ammoQ = myWp["ammo"].FirstOrDefault(x => x.ToString().Contains(ammoSyntax)).ToObject<int>();
                             if (ammoQ < GetConfig.Config["AmmoLimit"][0][ammo.Name].ToObject<int>())
                             {
                                 int ammoNeeded = GetConfig.Config["AmmoLimit"][0][ammo.Name].ToObject<int>() - ammoQ;
