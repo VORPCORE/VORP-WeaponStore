@@ -110,5 +110,10 @@ namespace vorpweaponstore_cl
         {
             TriggerServerEvent("vorpweaponstore:BuyWeapon", index);
         }
+
+        public static async Task RestockWeaponAmmo(int weaponId, double cost, string typeAmmo, int quantity)
+        {
+            TriggerServerEvent("vorpweaponstore:RestockAmmo", weaponId, cost, typeAmmo, quantity);
+        }
     }
 }

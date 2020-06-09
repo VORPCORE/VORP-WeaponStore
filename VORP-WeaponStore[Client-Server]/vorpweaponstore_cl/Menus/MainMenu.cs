@@ -43,6 +43,10 @@ namespace vorpweaponstore_cl.Menus
             mainMenu.AddMenuItem(subMenuManageBtn);
             MenuController.BindMenuItem(mainMenu, ManageWeaponsMenu.GetMenu(), subMenuManageBtn);
 
+            mainMenu.OnMenuOpen += (_menu) => {
+                GetConfig.ForceLoadWeapons();
+            };
+
             mainMenu.OnMenuClose += (_menu) =>
             {
                 ActionStore.ExitBuyStore();

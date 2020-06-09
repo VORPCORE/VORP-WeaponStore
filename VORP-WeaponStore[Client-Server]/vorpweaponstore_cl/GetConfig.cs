@@ -41,5 +41,9 @@ namespace vorpweaponstore_cl
             PlayerWeapons = JArray.Parse(w);
         }
 
+        public static void ForceLoadWeapons()
+        {
+            TriggerServerEvent($"{API.GetCurrentResourceName()}:getWeapons");
+        }
     }
 }
