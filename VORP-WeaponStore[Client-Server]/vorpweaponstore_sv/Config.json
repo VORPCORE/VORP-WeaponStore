@@ -17,7 +17,7 @@
     {
       "Name": "Lazo",
       "HashName": "WEAPON_LASSO",
-      "WeaponModel": "w_melee_lasso03",
+      "WeaponModel": "w_melee_lasso01",
       "Price": 100.0,
       "AmmoHash": [],
       "CompsHash": []
@@ -127,7 +127,13 @@
       "HashName": "WEAPON_THROWN_TOMAHAWK",
       "WeaponModel": "w_melee_tomahawk01",
       "Price": 100.0,
-      "AmmoHash": [],
+      "AmmoHash": [
+        {
+          "AMMO_TOMAHAWK": 2,
+          "AMMO_TOMAHAWK_IMPROVED": 2,
+          "AMMO_TOMAHAWK_HOMING": 2
+        }
+      ],
       "CompsHash": []
     },
     {
@@ -135,7 +141,13 @@
       "HashName": "WEAPON_THROWN_THROWING_KNIVES",
       "WeaponModel": "w_melee_knife05",
       "Price": 100.0,
-      "AmmoHash": [],
+      "AmmoHash": [
+        {
+          "AMMO_THROWING_KNIVES": 2,
+          "AMMO_THROWING_KNIVES_IMPROVED": 2,
+          "AMMO_THROWING_KNIVES_POISON": 2
+        }
+      ],
       "CompsHash": []
     },
     {
@@ -153,12 +165,12 @@
       "Price": 100.0,
       "AmmoHash": [
         {
-          "AMMO_ARROW": 0,
-          "AMMO_ARROW_DYNAMITE": 0,
-          "AMMO_ARROW_FIRE": 0,
-          "AMMO_ARROW_IMPROVED": 0,
-          "AMMO_ARROW_POISON": 0,
-          "AMMO_ARROW_SMALL_GAME": 0
+          "AMMO_ARROW": 0.25,
+          "AMMO_ARROW_DYNAMITE": 0.25,
+          "AMMO_ARROW_FIRE": 0.25,
+          "AMMO_ARROW_IMPROVED": 0.25,
+          "AMMO_ARROW_POISON": 0.25,
+          "AMMO_ARROW_SMALL_GAME": 0.25
         }
       ],
       "CompsHash": []
@@ -170,11 +182,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_PISTOL": 0,
-          "AMMO_PISTOL_EXPRESS": 0,
-          "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_PISTOL_HIGH_VELOCITY": 0,
-          "AMMO_PISTOL_SPLIT_POINT": 0
+          "AMMO_PISTOL": 0.25,
+          "AMMO_PISTOL_EXPRESS": 0.25,
+          "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_PISTOL_HIGH_VELOCITY": 0.25,
+          "AMMO_PISTOL_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -198,11 +210,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_PISTOL": 0,
-          "AMMO_PISTOL_EXPRESS": 0,
-          "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_PISTOL_HIGH_VELOCITY": 0,
-          "AMMO_PISTOL_SPLIT_POINT": 0
+          "AMMO_PISTOL": 0.25,
+          "AMMO_PISTOL_EXPRESS": 0.25,
+          "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_PISTOL_HIGH_VELOCITY": 0.25,
+          "AMMO_PISTOL_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -226,11 +238,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_PISTOL": 0,
-          "AMMO_PISTOL_EXPRESS": 0,
-          "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_PISTOL_HIGH_VELOCITY": 0,
-          "AMMO_PISTOL_SPLIT_POINT": 0
+          "AMMO_PISTOL": 0.25,
+          "AMMO_PISTOL_EXPRESS": 0.25,
+          "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_PISTOL_HIGH_VELOCITY": 0.25,
+          "AMMO_PISTOL_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -253,11 +265,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_PISTOL": 0,
-          "AMMO_PISTOL_EXPRESS": 0,
-          "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_PISTOL_HIGH_VELOCITY": 0,
-          "AMMO_PISTOL_SPLIT_POINT": 0
+          "AMMO_PISTOL": 0.25,
+          "AMMO_PISTOL_EXPRESS": 0.25,
+          "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_PISTOL_HIGH_VELOCITY": 0.25,
+          "AMMO_PISTOL_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -281,11 +293,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_REVOLVER": 0,
-          "AMMO_REVOLVER_EXPRESS": 0,
-          "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REVOLVER_HIGH_VELOCITY": 0,
-          "AMMO_REVOLVER_SPLIT_POINT": 0
+          "AMMO_REVOLVER": 0.25,
+          "AMMO_REVOLVER_EXPRESS": 0.25,
+          "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_REVOLVER_HIGH_VELOCITY": 0.25,
+          "AMMO_REVOLVER_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -308,11 +320,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_REVOLVER": 0,
-          "AMMO_REVOLVER_EXPRESS": 0,
-          "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REVOLVER_HIGH_VELOCITY": 0,
-          "AMMO_REVOLVER_SPLIT_POINT": 0
+          "AMMO_REVOLVER": 0.25,
+          "AMMO_REVOLVER_EXPRESS": 0.25,
+          "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_REVOLVER_HIGH_VELOCITY": 0.25,
+          "AMMO_REVOLVER_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -335,11 +347,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_REVOLVER": 0,
-          "AMMO_REVOLVER_EXPRESS": 0,
-          "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REVOLVER_HIGH_VELOCITY": 0,
-          "AMMO_REVOLVER_SPLIT_POINT": 0
+          "AMMO_REVOLVER": 0.25,
+          "AMMO_REVOLVER_EXPRESS": 0.25,
+          "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_REVOLVER_HIGH_VELOCITY": 0.25,
+          "AMMO_REVOLVER_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -363,11 +375,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_REVOLVER": 0,
-          "AMMO_REVOLVER_EXPRESS": 0,
-          "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REVOLVER_HIGH_VELOCITY": 0,
-          "AMMO_REVOLVER_SPLIT_POINT": 0
+          "AMMO_REVOLVER": 0.25,
+          "AMMO_REVOLVER_EXPRESS": 0.25,
+          "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_REVOLVER_HIGH_VELOCITY": 0.25,
+          "AMMO_REVOLVER_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -391,7 +403,7 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_RIFLE_VARMINT": 0
+          "AMMO_RIFLE_VARMINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -415,10 +427,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_REPEATER": 0,
-          "AMMO_REPEATER_EXPRESS": 0,
-          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REPEATER_HIGH_VELOCITY": 0
+          "AMMO_REPEATER": 0.25,
+          "AMMO_REPEATER_EXPRESS": 0.25,
+          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_REPEATER_HIGH_VELOCITY": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -439,10 +451,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_REPEATER": 0,
-          "AMMO_REPEATER_EXPRESS": 0,
-          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REPEATER_HIGH_VELOCITY": 0
+          "AMMO_REPEATER": 0.25,
+          "AMMO_REPEATER_EXPRESS": 0.25,
+          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_REPEATER_HIGH_VELOCITY": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -463,10 +475,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_REPEATER": 0,
-          "AMMO_REPEATER_EXPRESS": 0,
-          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REPEATER_HIGH_VELOCITY": 0
+          "AMMO_REPEATER": 0.25,
+          "AMMO_REPEATER_EXPRESS": 0.25,
+          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_REPEATER_HIGH_VELOCITY": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -487,10 +499,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_REPEATER": 0,
-          "AMMO_REPEATER_EXPRESS": 0,
-          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_REPEATER_HIGH_VELOCITY": 0
+          "AMMO_REPEATER": 0.25,
+          "AMMO_REPEATER_EXPRESS": 0.25,
+          "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_REPEATER_HIGH_VELOCITY": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -512,11 +524,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_RIFLE": 0,
-          "AMMO_RIFLE_EXPRESS": 0,
-          "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_RIFLE_HIGH_VELOCITY": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_RIFLE": 0.25,
+          "AMMO_RIFLE_EXPRESS": 0.25,
+          "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_RIFLE_HIGH_VELOCITY": 0.25,
+          "AMMO_RIFLE_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -542,11 +554,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_RIFLE": 0,
-          "AMMO_RIFLE_EXPRESS": 0,
-          "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_RIFLE_HIGH_VELOCITY": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_RIFLE": 0.25,
+          "AMMO_RIFLE_EXPRESS": 0.25,
+          "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_RIFLE_HIGH_VELOCITY": 0.25,
+          "AMMO_RIFLE_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -574,11 +586,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_RIFLE": 0,
-          "AMMO_RIFLE_EXPRESS": 0,
-          "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_RIFLE_HIGH_VELOCITY": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_RIFLE": 0.25,
+          "AMMO_RIFLE_EXPRESS": 0.25,
+          "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_RIFLE_HIGH_VELOCITY": 0.25,
+          "AMMO_RIFLE_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -604,11 +616,11 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_RIFLE": 0,
-          "AMMO_RIFLE_EXPRESS": 0,
-          "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_RIFLE_HIGH_VELOCITY": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_RIFLE": 0.25,
+          "AMMO_RIFLE_EXPRESS": 0.25,
+          "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_RIFLE_HIGH_VELOCITY": 0.25,
+          "AMMO_RIFLE_SPLIT_POINT": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -629,11 +641,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_SHOTGUN": 0,
-          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0,
-          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_SHOTGUN_SLUG": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_SHOTGUN": 0.25,
+          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0.25,
+          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_SHOTGUN_SLUG": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -656,11 +667,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_SHOTGUN": 0,
-          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0,
-          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_SHOTGUN_SLUG": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_SHOTGUN": 0.25,
+          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0.25,
+          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_SHOTGUN_SLUG": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -684,11 +694,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_SHOTGUN": 0,
-          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0,
-          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_SHOTGUN_SLUG": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_SHOTGUN": 0.25,
+          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0.25,
+          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_SHOTGUN_SLUG": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -711,11 +720,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_SHOTGUN": 0,
-          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0,
-          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_SHOTGUN_SLUG": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_SHOTGUN": 0.25,
+          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0.25,
+          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_SHOTGUN_SLUG": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -741,11 +749,10 @@
       "Price": 100.0,
       "AmmoHash": [ //Máximo de balas
         {
-          "AMMO_SHOTGUN": 0,
-          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0,
-          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0,
-          "AMMO_SHOTGUN_SLUG": 0,
-          "AMMO_RIFLE_SPLIT_POINT": 0
+          "AMMO_SHOTGUN": 0.25,
+          "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 0.25,
+          "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 0.25,
+          "AMMO_SHOTGUN_SLUG": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -775,6 +782,48 @@
           "w_camera_inner01": 0
         }
       ]
+    }
+  ],
+
+  "AmmoLimit": [
+    {
+      "AMMO_TOMAHAWK": 3,
+      "AMMO_TOMAHAWK_IMPROVED": 3,
+      "AMMO_TOMAHAWK_HOMING": 3,
+      "AMMO_THROWING_KNIVES": 8,
+      "AMMO_THROWING_KNIVES_IMPROVED": 8,
+      "AMMO_THROWING_KNIVES_POISON": 8,
+      "AMMO_ARROW": 40,
+      "AMMO_ARROW_DYNAMITE": 8,
+      "AMMO_ARROW_FIRE": 8,
+      "AMMO_ARROW_IMPROVED": 40,
+      "AMMO_ARROW_POISON": 8,
+      "AMMO_ARROW_SMALL_GAME": 40,
+      "AMMO_PISTOL": 100,
+      "AMMO_PISTOL_EXPRESS": 100,
+      "AMMO_PISTOL_EXPRESS_EXPLOSIVE": 10,
+      "AMMO_PISTOL_HIGH_VELOCITY": 100,
+      "AMMO_PISTOL_SPLIT_POINT": 50,
+      "AMMO_REVOLVER": 200,
+      "AMMO_REVOLVER_EXPRESS": 200,
+      "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 10,
+      "AMMO_REVOLVER_HIGH_VELOCITY": 200,
+      "AMMO_REVOLVER_SPLIT_POINT": 100,
+      "AMMO_RIFLE_VARMINT": 100, // No recarga el arma
+      "AMMO_REPEATER": 200,
+      "AMMO_REPEATER_EXPRESS": 200,
+      "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 10,
+      "AMMO_REPEATER_HIGH_VELOCITY": 200,
+      "AMMO_REPEATER_SPLIT_POINT": 100, // No aparecen en el inventario aunque las hayas comprado
+      "AMMO_RIFLE": 100,
+      "AMMO_RIFLE_EXPRESS": 100,
+      "AMMO_RIFLE_EXPRESS_EXPLOSIVE": 10,
+      "AMMO_RIFLE_HIGH_VELOCITY": 100,
+      "AMMO_RIFLE_SPLIT_POINT": 50,
+      "AMMO_SHOTGUN": 60,
+      "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": 14,
+      "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": 14, // No aparecen en el inventario aunque las hayas comprado
+      "AMMO_SHOTGUN_SLUG": 60
     }
   ]
 }
