@@ -14,16 +14,21 @@ namespace vorpweaponstore_sv
             EventHandlers["vorpweaponstore:BuyWeapon"] += new Action<Player, int>(buyItems);
             EventHandlers["vorpweaponstore:RestockAmmo"] += new Action<Player, int, double, string, int>(restockAmmo);
             EventHandlers["vorpweaponstore:BuyAmmoItem"] += new Action<Player, string, double>(BuyAmmoItem);
-            EventHandlers["vorp:useammo_bullet_pistol"] += new Action<Player, int>(usePistolAmmo);
+            EventHandlers["vorp:useammo_bullet_pistol"] += new Action<Player>(usePistolAmmo);
         }
 
-        private void usePistolAmmo([FromSource]Player source, int quantity)
+        private void usePistolAmmo([FromSource]Player source)
         {
             int _source = int.Parse(source.Handle);
 
             string sid = "steam:" + source.Identifiers["steam"];
 
-            Debug.WriteLine(quantity.ToString());
+            TriggerEvent("vorpCore:getItemCount", _source, new Action<dynamic>((count) =>
+            {
+                int item_count = count;
+                Debug.WriteLine(item_count.ToString());
+            }), "ammo_bullet_pistol");
+
         }
 
         private void restockAmmo([FromSource]Player source, int weaponId, double cost, string typeAmmo, int quantity)
