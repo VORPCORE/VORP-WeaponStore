@@ -76,5 +76,12 @@
   // Tomahawks
   "AMMO_TOMAHAWK": "Tomahawk normal",
   "AMMO_TOMAHAWK_IMPROVED": "Tomahawk mejorado",
-  "AMMO_TOMAHAWK_HOMING": "Tomahawk con cabeza mejorada"
+  "AMMO_TOMAHAWK_HOMING": "Tomahawk con cabeza mejorada",
+
+  "ammo_bullet_revolver": "Comprar Munición de Revolver (10x {0}$)",
+  "ammo_bullet_pistol": "Comprar Munición de Pistola (10x {0}$)",
+  "ammo_shotgun": "Comprar Munición de Escopeta (10x {0}$)",
+  "ammo_bullet_repeater": "Comprar Munición de Repetidor (10x {0}$)",
+  "ammo_bullet_rifle": "Comprar Munición de Rifle (10x {0}$)",
+  "ammo_bullet_varmin": "Comprar Munición de Varmin (10x {0}$)"
 }

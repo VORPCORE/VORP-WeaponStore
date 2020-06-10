@@ -1,5 +1,4 @@
 E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\build\vorp_weaponstore\vorpweaponstore_cl.net.dll
 E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\build\vorp_weaponstore\vorpweaponstore_cl.net.pdb
-E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_cl\obj\Debug\vorpweaponstore_cl.csprojAssemblyReference.cache
 E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_cl\obj\Debug\vorpweaponstore_cl.net.dll
 E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_cl\obj\Debug\vorpweaponstore_cl.net.pdb

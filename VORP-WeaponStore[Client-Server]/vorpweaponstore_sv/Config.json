@@ -9,7 +9,15 @@
       "EnterStore": [ 2716.12, -1285.5, 48.62, 1.0 ],
       "CameraMain": [ 2716.288, -1284.979, 50.22016, -7.764513, 0.0, -154.7173 ],
       "NPCStore": [ 2717.23, -1286.94, 48.63, 34.73 ],
-      "SpawnObjectStore": [ 2716.71, -1286.26, 49.80, 24.94 ]
+      "SpawnObjectStore": [ 2716.71, -1286.26, 49.80, 24.94 ],
+      "SpawnAmmoInStores": [
+        [ 2721.034, -1286.821, 49.6806, 205.34, "p_ammoboxhalf01x", "ammo_bullet_revolver", 0.25 ], //item ammo box of 10 bullets
+        [ 2721.631, -1286.55, 49.6806, 25.34, "s_inv_used_pistolammo01x", "ammo_bullet_pistol", 0.25 ],
+        [ 2720.465, -1287.084, 49.6806, 205.34, "s_sh_doubleammo01x", "ammo_shotgun", 0.25 ],
+        [ 2719.061, -1285.645, 49.6806, -200.34, "s_inv_repeat_rifleammo01x", "ammo_bullet_repeater", 0.25 ],
+        [ 2718.604, -1285.488, 49.6806, -15.34, "s_inv_used_rifleammo01x", "ammo_bullet_rifle", 0.25 ],
+        [ 2714.976, -1280.644, 49.6806, 25.34, "s_inv_varmint_rifleammo01x", "ammo_bullet_varmin", 0.25 ]
+      ]
     }
   ],
 

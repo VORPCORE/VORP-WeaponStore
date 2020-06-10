@@ -13,6 +13,12 @@ namespace vorpweaponstore_cl
 {
     public class ActionStore : BaseScript
     {
+
+        public ActionStore()
+        {
+
+        }
+
         public static int ObjectStore;
         private static int CamStore;
         private static int LaststoreId;
@@ -105,6 +111,7 @@ namespace vorpweaponstore_cl
             }
 
         }
+
 
         public static async Task BuyWeaponStore(int index)
         {

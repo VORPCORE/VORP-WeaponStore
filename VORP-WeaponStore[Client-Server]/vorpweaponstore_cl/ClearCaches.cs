@@ -32,6 +32,12 @@ namespace vorpweaponstore_cl
                 int _ped = npc;
                 DeletePed(ref _ped);
             }
+
+            foreach (int obj in weaponstore_init.StoreObjects)
+            {
+                int _obj = obj;
+                DeleteObject(ref _obj);
+            }
         }
 
     }

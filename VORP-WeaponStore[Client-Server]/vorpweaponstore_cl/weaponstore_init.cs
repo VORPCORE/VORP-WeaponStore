@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MenuAPI;
+using Newtonsoft.Json.Linq;
 
 namespace vorpweaponstore_cl
 {
@@ -13,6 +14,8 @@ namespace vorpweaponstore_cl
     {
         public static List<int> StoreBlips = new List<int>();
         public static List<int> StorePeds = new List<int>();
+        public static List<int> StoreObjects = new List<int>();
+        public static Dictionary<int, JToken> StoreAmmoObjects = new Dictionary<int, JToken>();
 
         public weaponstore_init()
         {
@@ -23,6 +26,7 @@ namespace vorpweaponstore_cl
         {
             await Delay(10000);
             Menus.MainMenu.GetMenu();
+
             foreach (var store in GetConfig.Config["Stores"])
             {
                 string ped = store["NPCModel"].ToString();
@@ -53,6 +57,24 @@ namespace vorpweaponstore_cl
                 API.FreezeEntityPosition(_PedShop, true);
                 API.SetModelAsNoLongerNeeded(HashPed);
                 await Delay(100);
+
+                foreach (var ammoBox in store["SpawnAmmoInStores"]) 
+                {
+                    float _x = float.Parse(ammoBox[0].ToString());
+                    float _y = float.Parse(ammoBox[1].ToString());
+                    float _z = float.Parse(ammoBox[2].ToString());
+                    float _h = float.Parse(ammoBox[3].ToString());
+                    uint hashModel = (uint)API.GetHashKey(ammoBox[4].ToString());
+                    await LoadModel(hashModel);
+                    int _ammoObject = API.CreateObject(hashModel, _x, _y, _z, false, true, false, true, true);
+                    API.SetEntityHeading(_ammoObject, _h);
+                    Function.Call((Hash)0x7DFB49BCDB73089A, _ammoObject, true);
+                    Function.Call((Hash)0x8A7391690F5AFD81, _ammoObject, true);
+                    API.FreezeEntityPosition(_ammoObject, true);
+                    StoreObjects.Add(_ammoObject);
+                    StoreAmmoObjects.Add(_ammoObject, ammoBox);
+                }
+
             }
         }
 

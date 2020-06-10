@@ -13,6 +13,17 @@ namespace vorpweaponstore_sv
         {
             EventHandlers["vorpweaponstore:BuyWeapon"] += new Action<Player, int>(buyItems);
             EventHandlers["vorpweaponstore:RestockAmmo"] += new Action<Player, int, double, string, int>(restockAmmo);
+            EventHandlers["vorpweaponstore:BuyAmmoItem"] += new Action<Player, string, double>(BuyAmmoItem);
+            EventHandlers["vorp:useammo_bullet_pistol"] += new Action<Player, int>(usePistolAmmo);
+        }
+
+        private void usePistolAmmo([FromSource]Player source, int quantity)
+        {
+            int _source = int.Parse(source.Handle);
+
+            string sid = "steam:" + source.Identifiers["steam"];
+
+            Debug.WriteLine(quantity.ToString());
         }
 
         private void restockAmmo([FromSource]Player source, int weaponId, double cost, string typeAmmo, int quantity)
@@ -33,6 +44,30 @@ namespace vorpweaponstore_sv
                 {
                     TriggerEvent("vorp:removeMoney", _source, 0, cost);
                     TriggerEvent("vorpCore:addBullets", _source, weaponId, typeAmmo, quantity);
+                }
+                else
+                {
+                    source.TriggerEvent("vorp:Tip", LoadConfig.Langs["NoMoney"], 4000);
+                }
+
+            }));
+        }
+
+        private void BuyAmmoItem([FromSource]Player source, string name, double cost)
+        {
+            int _source = int.Parse(source.Handle);
+
+            string sid = "steam:" + source.Identifiers["steam"];
+
+            TriggerEvent("vorp:getCharacter", _source, new Action<dynamic>((user) =>
+            {
+                double money = user.money;
+                if (cost <= money)
+                {
+
+                    TriggerEvent("vorp:removeMoney", _source, 0, cost);
+                    TriggerEvent("vorpCore:addItem", _source, name, 1);
+                    source.TriggerEvent("vorp:Tip", string.Format(LoadConfig.Langs["YouBoughtWeapon"], LoadConfig.Langs[name], cost.ToString()), 4000);
                 }
                 else
                 {
