@@ -1,4 +1,5 @@
 ﻿using CitizenFX.Core;
+using CitizenFX.Core.Native;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,21 +15,39 @@ namespace vorpweaponstore_sv
             EventHandlers["vorpweaponstore:BuyWeapon"] += new Action<Player, int>(buyItems);
             EventHandlers["vorpweaponstore:RestockAmmo"] += new Action<Player, int, double, string, int>(restockAmmo);
             EventHandlers["vorpweaponstore:BuyAmmoItem"] += new Action<Player, string, double>(BuyAmmoItem);
+            EventHandlers["vorpweaponstore:DeleteAmmoBox"] += new Action<Player, string>(delItems);
+            //Ammo Boxs
             EventHandlers["vorp:useammo_bullet_pistol"] += new Action<Player>(usePistolAmmo);
+            EventHandlers["vorp:useammo_bullet_revolver"] += new Action<Player>(useRevolverAmmo);
+            EventHandlers["vorp:useammo_shotgun"] += new Action<Player>(useShotgunAmmo);
+            EventHandlers["vorp:useammo_bullet_repeater"] += new Action<Player>(useRepeaterAmmo);
+            EventHandlers["vorp:useammo_ammo_bullet_rifle"] += new Action<Player>(useRifleAmmo);
+            EventHandlers["vorp:useammo_bullet_varmin"] += new Action<Player>(useVarmintAmmo);
         }
 
         private void usePistolAmmo([FromSource]Player source)
         {
-            int _source = int.Parse(source.Handle);
-
-            string sid = "steam:" + source.Identifiers["steam"];
-
-            TriggerEvent("vorpCore:getItemCount", _source, new Action<dynamic>((count) =>
-            {
-                int item_count = count;
-                Debug.WriteLine(item_count.ToString());
-            }), "ammo_bullet_pistol");
-
+            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_pistol");
+        }
+        private void useRevolverAmmo([FromSource]Player source)
+        {
+            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_revolver");
+        }
+        private void useShotgunAmmo([FromSource]Player source)
+        {
+            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_shotgun");
+        }
+        private void useRepeaterAmmo([FromSource]Player source)
+        {
+            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_repeater");
+        }
+        private void useRifleAmmo([FromSource]Player source)
+        {
+            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_rifle");
+        }
+        private void useVarmintAmmo([FromSource]Player source)
+        {
+            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_varmin");
         }
 
         private void restockAmmo([FromSource]Player source, int weaponId, double cost, string typeAmmo, int quantity)
@@ -108,6 +127,14 @@ namespace vorpweaponstore_sv
                 }
 
             }));
+        }
+
+        private void delItems([FromSource]Player source, string item)
+        {
+            int _source = int.Parse(source.Handle);
+
+            TriggerEvent("vorpCore:subItem", _source, item, 1);
+
         }
     }
 }

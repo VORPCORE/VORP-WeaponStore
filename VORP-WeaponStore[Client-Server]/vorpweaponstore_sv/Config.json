@@ -21,6 +21,17 @@
     }
   ],
 
+  "AmmoGivesOnUse": [
+    {
+      "ammo_bullet_revolver": "AMMO_REVOLVER",
+      "ammo_bullet_pistol": "AMMO_PISTOL",
+      "ammo_shotgun": "AMMO_SHOTGUN",
+      "ammo_bullet_repeater": "AMMO_REPEATER",
+      "ammo_bullet_rifle": "AMMO_RIFLE",
+      "ammo_bullet_varmin": "AMMO_RIFLE_VARMINT"
+    }
+  ],
+
   "Weapons": [
     {
       "Name": "Lazo",

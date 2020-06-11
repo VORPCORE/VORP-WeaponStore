@@ -23,6 +23,9 @@
   //"MenuManageWeaponButtonYes": "Comprar por {0}$",
 
   "NoMoney": "No tienes suficiente dinero",
+  "AmmoIsFull": "No puedes usar el cargador hasta haber gastado minimo 10 balas",
+  "IncorretWeapon": "Este cargador no vale para esta arma",
+  "NeedWeaponOnHand":  "Necesitas tener un arma en la mano",
 
   // Flechas
   "AMMO_ARROW": "Flechas",

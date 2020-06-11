@@ -1,5 +1,6 @@
 ﻿using CitizenFX.Core;
 using CitizenFX.Core.Native;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +17,63 @@ namespace vorpweaponstore_cl
 
         public PickupAmmo()
         {
+            EventHandlers[$"vorp_weaponstore:useAmmoItem"] += new Action<string>(OnUseAmmo);
             Tick += OnView;
             SetupPickPrompt();
         }
 
+        public void OnUseAmmo(string ammoName)
+        {
+            uint weaponHash = 0;
+            if (GetCurrentPedWeapon(PlayerPedId(), ref weaponHash, false, 0, false))
+            {
+                string weaponName = Function.Call<string>((Hash)0x89CF5FF3D363311E, weaponHash);
+                if (weaponName.Contains("UNARMED")) 
+                {
+                    TriggerEvent("vorp:Tip", GetConfig.Langs["NeedWeaponOnHand"], 3000);
+                }
+                else
+                {
+
+                    JToken wpc = GetConfig.Config["Weapons"].FirstOrDefault(x => x["HashName"].ToString().Contains(weaponName));
+                    Dictionary<string, double> ammoType = new Dictionary<string, double>();
+
+                    string ammoGives = GetConfig.Config["AmmoGivesOnUse"][0][ammoName].ToString();
+
+                    foreach (JObject ammoc in wpc["AmmoHash"].Children<JObject>())
+                    {
+                        foreach (JProperty ammo in ammoc.Properties())
+                        {
+                            ammoType.Add(ammo.Name, ammo.Value.ToObject<double>());
+                        }
+                    }
+
+                    if (ammoType.ContainsKey(ammoGives))
+                    {
+                        int ammoActually = GetPedAmmoByType(PlayerPedId(), GetHashKey(ammoGives));
+                        int maxAmmo = GetConfig.Config["AmmoLimit"][0][ammoGives].ToObject<int>();
+                        int ammoNeeded = (maxAmmo - ammoActually);
+                        if (ammoNeeded >= 10)
+                        {
+                            int newAmmo = ammoActually + 10;
+                            SetPedAmmoByType(PlayerPedId(), GetHashKey(ammoGives), newAmmo);
+                            TriggerServerEvent("vorpweaponstore:DeleteAmmoBox", ammoName);
+                        }
+                        else
+                        {
+                            TriggerEvent("vorp:Tip", GetConfig.Langs["AmmoIsFull"], 3000);
+                        }
+                    }
+                    else
+                    {
+                        TriggerEvent("vorp:Tip", GetConfig.Langs["IncorretWeapon"], 3000);
+                    }
+
+
+                }
+
+            }
+        } 
 
         [Tick]
         public async Task OnView()
