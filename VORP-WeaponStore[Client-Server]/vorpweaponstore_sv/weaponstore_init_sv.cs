@@ -22,7 +22,7 @@ namespace vorpweaponstore_sv
             EventHandlers["vorp:useammo_shotgun"] += new Action<Player>(useShotgunAmmo);
             EventHandlers["vorp:useammo_bullet_repeater"] += new Action<Player>(useRepeaterAmmo);
             EventHandlers["vorp:useammo_ammo_bullet_rifle"] += new Action<Player>(useRifleAmmo);
-            EventHandlers["vorp:useammo_bullet_varmin"] += new Action<Player>(useVarmintAmmo);
+            EventHandlers["vorp:useammo_bullet_varmint"] += new Action<Player>(useVarmintAmmo);
         }
 
         private void usePistolAmmo([FromSource]Player source)
@@ -47,7 +47,7 @@ namespace vorpweaponstore_sv
         }
         private void useVarmintAmmo([FromSource]Player source)
         {
-            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_varmin");
+            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_varmint");
         }
 
         private void restockAmmo([FromSource]Player source, int weaponId, double cost, string typeAmmo, int quantity)
