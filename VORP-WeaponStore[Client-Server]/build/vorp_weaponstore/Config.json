@@ -1,5 +1,5 @@
-﻿{
-  "defaultlang": "Es", // set your language
+{
+  "defaultlang": "Es", // You can change the Config to English by deleting this Config and renaming Config_En.json to Config.json
 
   "Stores": [
     {
