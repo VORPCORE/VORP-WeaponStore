@@ -306,7 +306,7 @@
       ]
     },
     {
-      "Name": "Revólver de Schofield",
+      "Name": "Revólver Schofield",
       "HashName": "WEAPON_REVOLVER_SCHOFIELD",
       "WeaponModel": "w_revolver_schofield01",
       "Price": 100.0,
