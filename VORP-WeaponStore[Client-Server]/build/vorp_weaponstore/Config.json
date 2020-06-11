@@ -28,7 +28,7 @@
       "ammo_shotgun": "AMMO_SHOTGUN",
       "ammo_bullet_repeater": "AMMO_REPEATER",
       "ammo_bullet_rifle": "AMMO_RIFLE",
-      "ammo_bullet_varmin": "AMMO_RIFLE_VARMINT"
+      "ammo_bullet_varmint": "AMMO_RIFLE_VARMINT"
     }
   ],
 
