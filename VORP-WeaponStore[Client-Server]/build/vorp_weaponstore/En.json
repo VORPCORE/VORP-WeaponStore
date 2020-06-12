@@ -71,10 +71,10 @@
   // Munición de Varmint (Hunting)
   "AMMO_RIFLE_VARMINT": "Varmint ammo",
 
-  // Throwing knifes
-  "AMMO_THROWING_KNIVES": "Normal knifes",
-  "AMMO_THROWING_KNIVES_IMPROVED": "Improved knifes",
-  "AMMO_THROWING_KNIVES_POISON": "Poisoned knifes",
+  // Throwing knives
+  "AMMO_THROWING_KNIVES": "Normal knives",
+  "AMMO_THROWING_KNIVES_IMPROVED": "Improved knives",
+  "AMMO_THROWING_KNIVES_POISON": "Poisoned knives",
 
   // Tomahawks
   "AMMO_TOMAHAWK": "Normal tomahawk",
