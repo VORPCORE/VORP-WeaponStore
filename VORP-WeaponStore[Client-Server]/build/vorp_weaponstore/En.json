@@ -22,9 +22,9 @@
   //"MenuManageWeaponButtonNo": "Cancel",
   //"MenuManageWeaponButtonYes": "Buy for {0}$",
 
-  "NoMoney": "You do not have enought money",
+  "NoMoney": "You do not have enough money",
   "AmmoIsFull": "You can not use the ammo clip unless you have used 10 bullets",
-  "IncorretWeapon": "Thi ammo clip does not work with this weapon",
+  "IncorretWeapon": "This ammo clip does not work with this weapon",
   "NeedWeaponOnHand":  "You need to have a weapon equipped",
 
   // Arrows
