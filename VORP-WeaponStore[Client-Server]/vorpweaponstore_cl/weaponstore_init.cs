@@ -76,6 +76,23 @@ namespace vorpweaponstore_cl
                 }
 
             }
+
+            //Load Models (Prevent duplicated models in table of shop)
+            foreach (JToken weapons in GetConfig.Config["Weapons"])
+            {
+                uint idObject = (uint)API.GetHashKey(weapons["WeaponModel"].ToString());
+
+                foreach (JObject c in weapons["CompsHash"].Children<JObject>())
+                {
+                    foreach (JProperty comp in c.Properties())
+                    {
+                        await LoadModel((uint)API.GetHashKey(comp.Name));
+                    }
+                }
+
+                await LoadModel(idObject);
+            }
+
         }
 
         [Tick]

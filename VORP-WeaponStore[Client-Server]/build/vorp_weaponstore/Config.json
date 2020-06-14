@@ -1,5 +1,5 @@
-{
-  "defaultlang": "Es", // You can change the Config to English by deleting this Config and renaming Config_En.json to Config.json
+﻿{
+  "defaultlang": "Es", // set your language
 
   "Stores": [
     {
@@ -28,7 +28,7 @@
       "ammo_shotgun": "AMMO_SHOTGUN",
       "ammo_bullet_repeater": "AMMO_REPEATER",
       "ammo_bullet_rifle": "AMMO_RIFLE",
-      "ammo_bullet_varmint": "AMMO_RIFLE_VARMINT"
+      "ammo_bullet_varmin": "AMMO_RIFLE_VARMINT"
     }
   ],
 
@@ -306,7 +306,7 @@
       ]
     },
     {
-      "Name": "Revólver Schofield",
+      "Name": "Revólver de Schofield",
       "HashName": "WEAPON_REVOLVER_SCHOFIELD",
       "WeaponModel": "w_revolver_schofield01",
       "Price": 100.0,
