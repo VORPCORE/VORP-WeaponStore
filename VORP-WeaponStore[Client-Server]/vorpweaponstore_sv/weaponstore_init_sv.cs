@@ -16,38 +16,48 @@ namespace vorpweaponstore_sv
             EventHandlers["vorpweaponstore:RestockAmmo"] += new Action<Player, int, double, string, int>(restockAmmo);
             EventHandlers["vorpweaponstore:BuyAmmoItem"] += new Action<Player, string, double>(BuyAmmoItem);
             EventHandlers["vorpweaponstore:DeleteAmmoBox"] += new Action<Player, string>(delItems);
-            //Ammo Boxs
-            EventHandlers["vorp:useammo_bullet_pistol"] += new Action<Player>(usePistolAmmo);
-            EventHandlers["vorp:useammo_bullet_revolver"] += new Action<Player>(useRevolverAmmo);
-            EventHandlers["vorp:useammo_shotgun"] += new Action<Player>(useShotgunAmmo);
-            EventHandlers["vorp:useammo_bullet_repeater"] += new Action<Player>(useRepeaterAmmo);
-            EventHandlers["vorp:useammo_ammo_bullet_rifle"] += new Action<Player>(useRifleAmmo);
-            EventHandlers["vorp:useammo_bullet_varmint"] += new Action<Player>(useVarmintAmmo);
+            RegisterUsableItems();
         }
 
-        private void usePistolAmmo([FromSource]Player source)
+        private async Task RegisterUsableItems()
         {
-            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_pistol");
-        }
-        private void useRevolverAmmo([FromSource]Player source)
-        {
-            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_revolver");
-        }
-        private void useShotgunAmmo([FromSource]Player source)
-        {
-            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_shotgun");
-        }
-        private void useRepeaterAmmo([FromSource]Player source)
-        {
-            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_repeater");
-        }
-        private void useRifleAmmo([FromSource]Player source)
-        {
-            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_rifle");
-        }
-        private void useVarmintAmmo([FromSource]Player source)
-        {
-            source.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_varmint");
+            await Delay(2000);
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_pistol", new Action<dynamic>((source) =>
+            {
+                PlayerList pl = new PlayerList();
+                Player p = pl[source];
+                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_pistol");
+            }));
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_revolver", new Action<dynamic>((source) =>
+            {
+                PlayerList pl = new PlayerList();
+                Player p = pl[source];
+                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_revolver");
+            }));
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_shotgun", new Action<dynamic>((source) =>
+            {
+                PlayerList pl = new PlayerList();
+                Player p = pl[source];
+                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_shotgun");
+            }));
+            TriggerEvent("vorpCore:registerUsableItem", "useammo_bullet_repeater", new Action<dynamic>((source) =>
+            {
+                PlayerList pl = new PlayerList();
+                Player p = pl[source];
+                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "useammo_bullet_repeater");
+            }));
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_ammo_bullet_rifle", new Action<dynamic>((source) =>
+            {
+                PlayerList pl = new PlayerList();
+                Player p = pl[source];
+                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_ammo_bullet_rifle");
+            }));
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_varmint", new Action<dynamic>((source) =>
+            {
+                PlayerList pl = new PlayerList();
+                Player p = pl[source];
+                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_varmint");
+            }));
         }
 
         private void restockAmmo([FromSource]Player source, int weaponId, double cost, string typeAmmo, int quantity)
