@@ -81,7 +81,7 @@ namespace vorpweaponstore_sv
                 }
                 else
                 {
-                    source.TriggerEvent("vorp:Tip", LoadConfig.Langs["NoMoney"], 4000);
+                    source.TriggerEvent("vorp:TipRight", LoadConfig.Langs["NoMoney"], 4000);
                 }
 
             }));
@@ -101,11 +101,11 @@ namespace vorpweaponstore_sv
 
                     TriggerEvent("vorp:removeMoney", _source, 0, cost);
                     TriggerEvent("vorpCore:addItem", _source, name, 1);
-                    source.TriggerEvent("vorp:Tip", string.Format(LoadConfig.Langs["YouBoughtWeapon"], LoadConfig.Langs[name], cost.ToString()), 4000);
+                    source.TriggerEvent("vorp:TipRight", string.Format(LoadConfig.Langs["YouBoughtWeapon"], LoadConfig.Langs[name.ToUpper()], cost.ToString()), 3000);
                 }
                 else
                 {
-                    source.TriggerEvent("vorp:Tip", LoadConfig.Langs["NoMoney"], 4000);
+                    source.TriggerEvent("vorp:TipRight", LoadConfig.Langs["NoMoney"], 4000);
                 }
 
             }));
@@ -126,14 +126,14 @@ namespace vorpweaponstore_sv
                 double money = user.money;
                 if (cost <= money)
                 {
-
+                    Dictionary<string, int> ammoaux = new Dictionary<string, int>();
                     TriggerEvent("vorp:removeMoney", _source, 0, cost);
-                    TriggerEvent("vorpCore:registerWeapon", _source, weaponHash);
-                    source.TriggerEvent("vorp:Tip", string.Format(LoadConfig.Langs["YouBoughtWeapon"], weaponName, cost.ToString()), 4000);
+                    TriggerEvent("vorpCore:registerWeapon", _source, weaponHash, ammoaux, ammoaux);
+                    source.TriggerEvent("vorp:TipRight", string.Format(LoadConfig.Langs["YouBoughtWeapon"], weaponName, cost.ToString()), 4000);
                 }
                 else
                 {
-                    source.TriggerEvent("vorp:Tip", LoadConfig.Langs["NoMoney"], 4000);
+                    source.TriggerEvent("vorp:TipRight", LoadConfig.Langs["NoMoney"], 4000);
                 }
 
             }));
