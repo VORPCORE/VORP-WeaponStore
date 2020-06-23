@@ -22,40 +22,40 @@ namespace vorpweaponstore_sv
         private async Task RegisterUsableItems()
         {
             await Delay(2000);
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_pistol", new Action<dynamic>((source) =>
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_pistol", new Action<dynamic>((data) =>
             {
                 PlayerList pl = new PlayerList();
-                Player p = pl[source];
+                Player p = pl[data.source];
                 p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_pistol");
             }));
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_revolver", new Action<dynamic>((source) =>
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_revolver", new Action<dynamic>((data) =>
             {
                 PlayerList pl = new PlayerList();
-                Player p = pl[source];
+                Player p = pl[data.source];
                 p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_revolver");
             }));
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_shotgun", new Action<dynamic>((source) =>
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_shotgun", new Action<dynamic>((data) =>
             {
                 PlayerList pl = new PlayerList();
-                Player p = pl[source];
+                Player p = pl[data.source];
                 p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_shotgun");
             }));
-            TriggerEvent("vorpCore:registerUsableItem", "useammo_bullet_repeater", new Action<dynamic>((source) =>
+            TriggerEvent("vorpCore:registerUsableItem", "useammo_bullet_repeater", new Action<dynamic>((data) =>
             {
                 PlayerList pl = new PlayerList();
-                Player p = pl[source];
+                Player p = pl[data.source];
                 p.TriggerEvent("vorp_weaponstore:useAmmoItem", "useammo_bullet_repeater");
             }));
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_ammo_bullet_rifle", new Action<dynamic>((source) =>
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_ammo_bullet_rifle", new Action<dynamic>((data) =>
             {
                 PlayerList pl = new PlayerList();
-                Player p = pl[source];
+                Player p = pl[data.source];
                 p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_ammo_bullet_rifle");
             }));
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_varmint", new Action<dynamic>((source) =>
+            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_varmint", new Action<dynamic>((data) =>
             {
                 PlayerList pl = new PlayerList();
-                Player p = pl[source];
+                Player p = pl[data.source];
                 p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_varmint");
             }));
         }
