@@ -1,4 +1,4 @@
-﻿{
+{
   "PressToOpen": "Pulsa [~e~Espacio~q~] para acceder a la armería",
   "MenuMainDesc": "Compra armas, munición y mejoras",
   "MenuMainButtonBuyWeapons": "Comprar Armas",
@@ -86,5 +86,5 @@
   "ammo_shotgun": "Comprar Munición de Escopeta (10x {0}$)",
   "ammo_bullet_repeater": "Comprar Munición de Repetidor (10x {0}$)",
   "ammo_bullet_rifle": "Comprar Munición de Rifle (10x {0}$)",
-  "ammo_bullet_varmin": "Comprar Munición de Varmin (10x {0}$)"
+  "ammo_bullet_varmint": "Comprar Munición de Varmint (10x {0}$)"
 }
