@@ -16,7 +16,7 @@
         [ 2720.465, -1287.084, 49.6806, 205.34, "s_sh_doubleammo01x", "ammo_shotgun", 0.25 ],
         [ 2719.061, -1285.645, 49.6806, -200.34, "s_inv_repeat_rifleammo01x", "ammo_bullet_repeater", 0.25 ],
         [ 2718.604, -1285.488, 49.6806, -15.34, "s_inv_used_rifleammo01x", "ammo_bullet_rifle", 0.25 ],
-        [ 2714.976, -1280.644, 49.6806, 25.34, "s_inv_varmint_rifleammo01x", "ammo_bullet_varmin", 0.25 ]
+        [ 2714.976, -1280.644, 49.6806, 25.34, "s_inv_varmint_rifleammo01x", "ammo_bullet_varmint", 0.25 ]
       ]
     }
   ],
@@ -28,7 +28,7 @@
       "ammo_shotgun": "AMMO_SHOTGUN",
       "ammo_bullet_repeater": "AMMO_REPEATER",
       "ammo_bullet_rifle": "AMMO_RIFLE",
-      "ammo_bullet_varmin": "AMMO_RIFLE_VARMINT"
+      "ammo_bullet_varmint": "AMMO_RIFLE_VARMINT"
     }
   ],
 
