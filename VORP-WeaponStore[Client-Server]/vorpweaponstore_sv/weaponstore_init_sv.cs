@@ -101,7 +101,7 @@ namespace vorpweaponstore_sv
 
                     TriggerEvent("vorp:removeMoney", _source, 0, cost);
                     TriggerEvent("vorpCore:addItem", _source, name, 1);
-                    source.TriggerEvent("vorp:TipRight", string.Format(LoadConfig.Langs["YouBoughtWeapon"], LoadConfig.Langs[name.ToUpper()], cost.ToString()), 3000);
+                    source.TriggerEvent("vorp:TipRight", string.Format(LoadConfig.Langs[name.ToLower()], cost.ToString()), 3000);
                 }
                 else
                 {
