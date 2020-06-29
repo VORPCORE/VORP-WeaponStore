@@ -10,7 +10,7 @@ Weapon Stores for VORP Core
 ## How to install
 * [Download the lastest version of VORP Weapon Stores](https://github.com/VORPCORE/VORP-WeaponStore/releases)
 * Copy and paste ```vorp_weaponstore``` folder to ```resources/vorp_weaponstore```
-* Add ```ensure vorp_character``` to your ```server.cfg``` file
+* Add ```ensure vorp_weaponstore``` to your ```server.cfg``` file
 * To change the language go to ```resources/vorp_weaponstore/Config``` and change the default language
 * Now you are ready!
 
