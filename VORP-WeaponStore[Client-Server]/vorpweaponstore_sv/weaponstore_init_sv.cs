@@ -1,5 +1,6 @@
 ﻿using CitizenFX.Core;
 using CitizenFX.Core.Native;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,43 +22,21 @@ namespace vorpweaponstore_sv
 
         private async Task RegisterUsableItems()
         {
-            await Delay(2000);
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_pistol", new Action<dynamic>((data) =>
+            await Delay(3000);
+
+            foreach (JObject content in LoadConfig.Config["AmmoGivesOnUse"].Children<JObject>())
             {
-                PlayerList pl = new PlayerList();
-                Player p = pl[data.source];
-                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_pistol");
-            }));
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_revolver", new Action<dynamic>((data) =>
-            {
-                PlayerList pl = new PlayerList();
-                Player p = pl[data.source];
-                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_revolver");
-            }));
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_shotgun", new Action<dynamic>((data) =>
-            {
-                PlayerList pl = new PlayerList();
-                Player p = pl[data.source];
-                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_shotgun");
-            }));
-            TriggerEvent("vorpCore:registerUsableItem", "useammo_bullet_repeater", new Action<dynamic>((data) =>
-            {
-                PlayerList pl = new PlayerList();
-                Player p = pl[data.source];
-                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "useammo_bullet_repeater");
-            }));
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_ammo_bullet_rifle", new Action<dynamic>((data) =>
-            {
-                PlayerList pl = new PlayerList();
-                Player p = pl[data.source];
-                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_ammo_bullet_rifle");
-            }));
-            TriggerEvent("vorpCore:registerUsableItem", "ammo_bullet_varmint", new Action<dynamic>((data) =>
-            {
-                PlayerList pl = new PlayerList();
-                Player p = pl[data.source];
-                p.TriggerEvent("vorp_weaponstore:useAmmoItem", "ammo_bullet_varmint");
-            }));
+                foreach (JProperty ammoboxes in content.Properties())
+                {
+                    TriggerEvent("vorpCore:registerUsableItem", ammoboxes.Name, new Action<dynamic>((data) =>
+                    {
+                        PlayerList pl = new PlayerList();
+                        Player p = pl[data.source];
+                        p.TriggerEvent("vorp_weaponstore:useAmmoItem", ammoboxes.Name);
+                    }));
+                    await Delay(800);
+                }
+            }
         }
 
         private void restockAmmo([FromSource]Player source, int weaponId, double cost, string typeAmmo, int quantity)

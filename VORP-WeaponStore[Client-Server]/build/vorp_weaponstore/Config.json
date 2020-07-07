@@ -1,4 +1,4 @@
-{
+﻿{
   "defaultlang": "Es", // set your language
 
   "Stores": [
@@ -28,7 +28,7 @@
       "ammo_shotgun": "AMMO_SHOTGUN",
       "ammo_bullet_repeater": "AMMO_REPEATER",
       "ammo_bullet_rifle": "AMMO_RIFLE",
-      "ammo_bullet_varmint": "AMMO_RIFLE_VARMINT"
+      "ammo_bullet_varmint": "AMMO_22"
     }
   ],
 
@@ -420,9 +420,9 @@
       "HashName": "WEAPON_RIFLE_VARMINT",
       "WeaponModel": "w_repeater_pumpaction01",
       "Price": 100.0,
-      "AmmoHash": [ //Máximo de balas
+      "AmmoHash": [
         {
-          "AMMO_REPEATER": 0.25
+          "AMMO_22": 0.25
         }
       ],
       "CompsHash": [ //Precio Componente
@@ -828,6 +828,7 @@
       "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 10,
       "AMMO_REVOLVER_HIGH_VELOCITY": 200,
       "AMMO_REVOLVER_SPLIT_POINT": 100,
+      "AMMO_22": 100, // No recarga el arma
       "AMMO_REPEATER": 200,
       "AMMO_REPEATER_EXPRESS": 200,
       "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 10,

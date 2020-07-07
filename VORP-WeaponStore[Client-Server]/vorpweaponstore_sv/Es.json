@@ -69,7 +69,7 @@
   "AMMO_SHOTGUN_SLUG": "Postas",
 
   // Munición de Varmint (Caza)
-  "AMMO_RIFLE_VARMINT": "Munición Varmint",
+  "AMMO_22": "Munición Varmint",
 
   // Cuchillos arrojadizos
   "AMMO_THROWING_KNIVES": "Cuchillos normales",
