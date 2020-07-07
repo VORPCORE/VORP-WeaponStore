@@ -474,7 +474,7 @@
       "Price": 100.0,
       "AmmoHash": [ // Ammo price per bullet/knife/tomahawk
         {
-          "AMMO_RIFLE_VARMINT": 0.25
+          "AMMO_REPEATER": 0.25
         }
       ],
       "CompsHash": [ // Component Price
@@ -880,7 +880,6 @@
       "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": 10,
       "AMMO_REVOLVER_HIGH_VELOCITY": 200,
       "AMMO_REVOLVER_SPLIT_POINT": 100,
-      "AMMO_RIFLE_VARMINT": 100, 
       "AMMO_REPEATER": 200,
       "AMMO_REPEATER_EXPRESS": 200,
       "AMMO_REPEATER_EXPRESS_EXPLOSIVE": 10,
