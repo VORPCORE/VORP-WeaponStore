@@ -105,10 +105,21 @@ namespace vorpweaponstore_sv
                 double money = user.money;
                 if (cost <= money)
                 {
-                    Dictionary<string, int> ammoaux = new Dictionary<string, int>();
-                    TriggerEvent("vorp:removeMoney", _source, 0, cost);
-                    TriggerEvent("vorpCore:registerWeapon", _source, weaponHash, ammoaux, ammoaux);
-                    source.TriggerEvent("vorp:TipRight", string.Format(LoadConfig.Langs["YouBoughtWeapon"], weaponName, cost.ToString()), 4000);
+                    TriggerEvent("vorpCore:canCarryWeapons", _source, 1, new Action<dynamic>((can) =>
+                    {
+                        if (can)
+                        {
+                            Dictionary<string, int> ammoaux = new Dictionary<string, int>();
+                            TriggerEvent("vorp:removeMoney", _source, 0, cost);
+                            TriggerEvent("vorpCore:registerWeapon", _source, weaponHash, ammoaux, ammoaux);
+                            source.TriggerEvent("vorp:TipRight", string.Format(LoadConfig.Langs["YouBoughtWeapon"], weaponName, cost.ToString()), 4000);
+                        }
+                        else
+                        {
+                            //Notif 
+                        }
+
+                    }));
                 }
                 else
                 {
