@@ -32,16 +32,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CitizenFX.Core">
-      <HintPath>C:\Users\osman\AppData\Local\RedM\RedM.app\citizen\clr2\lib\mono\4.5\CitizenFX.Core.dll</HintPath>
+      <HintPath>C:\RedM\RedM.app\citizen\clr2\lib\mono\4.5\CitizenFX.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="MenuAPI">
-      <HintPath>..\..\..\VORP-Stores\VORP-Stores[Client-Server]\build\vorp_stores\MenuAPI.dll</HintPath>
+    <Reference Include="MenuAPI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Sergio\Downloads\MenuAPI-v3.1.5-RedM (2)\Release RedM\net452\MenuAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\VORP-Character\VORP-Character[Client-Server]\build\vorp_character\Newtonsoft.Json.dll</HintPath>
+      <HintPath>C:\Users\Sergio\Downloads\VORP-Character-master (1)\VORP-Character-master\VORP-Character[Client-Server]\build\vorp_character\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />

@@ -5,3 +5,11 @@ E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_s
 E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\build\vorp_weaponstore\Config.json
 E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\build\vorp_weaponstore\Es.json
 E:\VORP-Repos\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_sv\obj\Debug\vorpweaponstore_sv.csprojAssemblyReference.cache
+F:\VORP-Scripts\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\build\vorp_weaponstore\Config.json
+F:\VORP-Scripts\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\build\vorp_weaponstore\Es.json
+F:\VORP-Scripts\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\build\vorp_weaponstore\vorpweaponstore_sv.net.dll
+F:\VORP-Scripts\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\build\vorp_weaponstore\vorpweaponstore_sv.net.pdb
+F:\VORP-Scripts\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_sv\obj\Debug\vorpweaponstore_sv.csprojAssemblyReference.cache
+F:\VORP-Scripts\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_sv\obj\Debug\vorpweaponstore_sv.csproj.CoreCompileInputs.cache
+F:\VORP-Scripts\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_sv\obj\Debug\vorpweaponstore_sv.net.dll
+F:\VORP-Scripts\VORP-WeaponStore\VORP-WeaponStore[Client-Server]\vorpweaponstore_sv\obj\Debug\vorpweaponstore_sv.net.pdb

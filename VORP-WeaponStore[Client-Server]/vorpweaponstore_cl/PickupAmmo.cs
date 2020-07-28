@@ -73,9 +73,8 @@ namespace vorpweaponstore_cl
                 }
 
             }
-        } 
+        }
 
-        [Tick]
         public async Task OnView()
         {
             int entity = 0;
@@ -105,7 +104,6 @@ namespace vorpweaponstore_cl
 
                 if (Function.Call<bool>((Hash)0xE0F65F0640EF0617, PickPrompt))
                 {
-                    Debug.WriteLine("Presionado");
                     double costUnit = weaponstore_init.StoreAmmoObjects[entity][6].ToObject<double>();
                     double costTotal = costUnit * 10;
                     Function.Call((Hash)0x8A0FB4D03A630D21, PickPrompt, false);
@@ -122,11 +120,6 @@ namespace vorpweaponstore_cl
                 Function.Call((Hash)0x8A0FB4D03A630D21, PickPrompt, false);
                 Function.Call((Hash)0x71215ACCFDE075EE, PickPrompt, false);
                 UIActive = false;
-            }
-
-            if (IsControlJustPressed(0, 0xCEE12B50))
-            {
-                Debug.WriteLine(endCoord.ToString());
             }
         }
 

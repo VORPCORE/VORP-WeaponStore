@@ -55,6 +55,7 @@ namespace vorpweaponstore_cl
                 API.SetEntityInvincible(_PedShop, true);
                 await Delay(1000);
                 API.FreezeEntityPosition(_PedShop, true);
+                API.SetBlockingOfNonTemporaryEvents(_PedShop, true);
                 API.SetModelAsNoLongerNeeded(HashPed);
                 await Delay(100);
 
@@ -95,7 +96,6 @@ namespace vorpweaponstore_cl
 
         }
 
-        [Tick]
         private async Task onStore()
         {
             if (StorePeds.Count() == 0) { return; }
@@ -141,7 +141,6 @@ namespace vorpweaponstore_cl
                 Function.Call(Hash.REQUEST_MODEL, hash);
                 while (!Function.Call<bool>(Hash.HAS_MODEL_LOADED, hash))
                 {
-                    Debug.WriteLine($"Waiting for model {hash} load!");
                     await Delay(100);
                 }
                 return true;
