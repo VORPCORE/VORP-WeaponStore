@@ -109,14 +109,16 @@ namespace vorpweaponstore_sv
                     {
                         if (can)
                         {
-                            Dictionary<string, int> ammoaux = new Dictionary<string, int>();
+                            Dictionary<string, int> ammoaux = new Dictionary<string, int>()
+                            {
+                                { "nothing", 0 }
+                            };
                             TriggerEvent("vorp:removeMoney", _source, 0, cost);
                             TriggerEvent("vorpCore:registerWeapon", _source, weaponHash, ammoaux, ammoaux);
                             source.TriggerEvent("vorp:TipRight", string.Format(LoadConfig.Langs["YouBoughtWeapon"], weaponName, cost.ToString()), 4000);
                         }
                         else
                         {
-                            //Notif 
                         }
 
                     }));
