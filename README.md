@@ -4,8 +4,8 @@ Weapon Stores for VORP Core
 ## Requirements
 - [VORP-Core](https://github.com/VORPCORE/VORP-Core/releases)
 - [VORP-Inputs](https://github.com/VORPCORE/VORP-Inputs/releases)
-- [VORP Character](https://github.com/VORPCORE/VORP-Character/releases)
-- [VORP Inventory](https://github.com/VORPCORE/VORP-Inventory/releases)
+- [VORP-Character](https://github.com/VORPCORE/VORP-Character/releases)
+- [VORP-Inventory](https://github.com/VORPCORE/VORP-Inventory/releases)
 
 ## How to install
 * [Download the lastest version of VORP Weapon Stores](https://github.com/VORPCORE/VORP-WeaponStore/releases)
