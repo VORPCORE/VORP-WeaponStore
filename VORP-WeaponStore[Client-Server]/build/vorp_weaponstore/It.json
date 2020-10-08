@@ -1,0 +1,90 @@
+{
+    "PressToOpen": "Premi [~e~Spazio~q~] per accedere all'armeria",
+    "MenuMainDesc": "Compra armi, munizioni e upgrades",
+    "MenuMainButtonBuyWeapons": "Compra armi",
+    "MenuBuyWeaponsDesc": "Conferma",
+    "MenuBuyWeaponsButtonNo": "Annulla",
+    "MenuBuyWeaponsButtonYes": "Compra per {0}$",
+    "YouBoughtWeapon": "Hai comprato {0} per {1}$",
+
+    "MenuMainButtonBuyAmmo": "Compra munizioni",
+    //"MenuBuyAmmoDesc": "Confirm",
+    //"MenuBuyAmmoButtonNo": "Cancel",
+    //"MenuBuyAmmoButtonYes": "Buy for {0}$",
+
+    "MenuMainButtonManageWeapon": "Gestisci armi",
+    "MenuManageWeaponDesc": "Gestisce le tue armi",
+    "MenuManageAmmo": "Compra munizioni",
+    "MenuManageAmmoDesc": "Scegli un'opzione",
+    "ManageAmmoRestockMenu": "Ricarica le munizioni",
+    "ManageAmmoRestockBtnRestock": "({0}/{1}) {2}$",
+    "ManageAmmoRestockBtnFull": "Caricatore munizioni pieno",
+    //"MenuManageWeaponButtonNo": "Cancel",
+    //"MenuManageWeaponButtonYes": "Buy for {0}$",
+
+    "NoMoney": "Non hai abbastanza soldi",
+    "AmmoIsFull": "Non puoi usare il caricatore di munizioni a meno che tu non abbia usato 10 proiettili",
+    "IncorretWeapon": "Questo caricatore di munizioni non funziona con quest'arma",
+    "NeedWeaponOnHand": "Devi avere un'arma equipaggiata",
+
+    // Arrows
+    "AMMO_ARROW": "Frecce",
+    "AMMO_ARROW_DYNAMITE": "Frecce esplosive",
+    "AMMO_ARROW_FIRE": "Frecce incendiarie",
+    "AMMO_ARROW_IMPROVED": "Frecce migliorate",
+    "AMMO_ARROW_POISON": "Frecce avvelenate",
+    "AMMO_ARROW_SMALL_GAME": "Freccie small game",
+
+    // Pistol ammo
+    "AMMO_PISTOL": "Munizioni normali",
+    "AMMO_PISTOL_EXPRESS": "Munizioni express",
+    "AMMO_PISTOL_EXPRESS_EXPLOSIVE": "Munizioni esplosive",
+    "AMMO_PISTOL_HIGH_VELOCITY": "Munizioni ad alta velocità",
+    "AMMO_PISTOL_SPLIT_POINT": "Munizioni split point",
+
+    // Revolver ammo
+    "AMMO_REVOLVER": "Munizioni normali",
+    "AMMO_REVOLVER_EXPRESS": "Munizioni express",
+    "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": "Munizioni esplosive",
+    "AMMO_REVOLVER_HIGH_VELOCITY": "Munizioni ad alta velocità",
+    "AMMO_REVOLVER_SPLIT_POINT": "Munizioni split point",
+
+    // Repeater ammo
+    "AMMO_REPEATER": "Munizioni normali",
+    "AMMO_REPEATER_EXPRESS": "Munizioni express",
+    "AMMO_REPEATER_EXPRESS_EXPLOSIVE": "Munizioni esplosive",
+    "AMMO_REPEATER_HIGH_VELOCITY": "Munizioni ad alta velocità",
+
+    // Rifle ammo
+    "AMMO_RIFLE": "Munizioni normali",
+    "AMMO_RIFLE_EXPRESS": "Munizioni express",
+    "AMMO_RIFLE_EXPRESS_EXPLOSIVE": "Munizioni esplosive",
+    "AMMO_RIFLE_HIGH_VELOCITY": "Munizioni ad alta velocità",
+    "AMMO_RIFLE_SPLIT_POINT": "Munizioni split point",
+
+    // Shotgun ammo
+    "AMMO_SHOTGUN": "Munizioni normali",
+    "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": "Munizioni incendiarie",
+    "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": "Munizioni esplosive",
+    "AMMO_SHOTGUN_SLUG": "Munizioni",
+
+    // Munición de Varmint (Hunting)
+    "AMMO_22": "Munizioni Varmint",
+
+    // Throwing knives
+    "AMMO_THROWING_KNIVES": "Coltelli normali",
+    "AMMO_THROWING_KNIVES_IMPROVED": "Coltelli migliorati",
+    "AMMO_THROWING_KNIVES_POISON": "Coltelli avvelenati",
+
+    // Tomahawks
+    "AMMO_TOMAHAWK": "Tomahawk normale",
+    "AMMO_TOMAHAWK_IMPROVED": "Tomahawk migliorato",
+    "AMMO_TOMAHAWK_HOMING": "Tomahawk homing",
+
+    "ammo_bullet_revolver": "Compra munizioni Revolver (10x {0}$)",
+    "ammo_bullet_pistol": "Compra munizioni pistola (10x {0}$)",
+    "ammo_shotgun": "Compra munizioni fucile a pompa (10x {0}$)",
+    "ammo_bullet_repeater": "Compra munizioni a ripetizione (10x {0}$)",
+    "ammo_bullet_rifle": "Compra munizioni fucile (10x {0}$)",
+    "ammo_bullet_varmint": "Compra munizioni Varmint (10x {0}$)"
+}
