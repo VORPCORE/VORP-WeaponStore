@@ -1,0 +1,90 @@
+{
+    "PressToOpen": "Druk [~e~Space~q~] om de wapens te bekijken",
+    "MenuMainDesc": "Koop wapens, kogels en upgrades",
+    "MenuMainButtonBuyWeapons": "Koop wapens",
+    "MenuBuyWeaponsDesc": "Bevestig",
+    "MenuBuyWeaponsButtonNo": "Annuleer",
+    "MenuBuyWeaponsButtonYes": "Koop voor {0}$",
+    "YouBoughtWeapon": "Je hebt {0} voor {1}$ gekocht",
+
+    "MenuMainButtonBuyAmmo": "Koop kogels",
+    //"MenuBuyAmmoDesc": "Bevestig",
+    //"MenuBuyAmmoButtonNo": "Annuleer",
+    //"MenuBuyAmmoButtonYes": "Koop voor {0}$",
+
+    "MenuMainButtonManageWeapon": "Jouw wapens",
+    "MenuManageWeaponDesc": "Selecteer je wapens",
+    "MenuManageAmmo": "Koop Kogels",
+    "MenuManageAmmoDesc": "Kies een optie",
+    "ManageAmmoRestockMenu": "Hervul kogels",
+    "ManageAmmoRestockBtnRestock": "({0}/{1}) {2}$",
+    "ManageAmmoRestockBtnFull": "Lader vol",
+    //"MenuManageWeaponButtonNo": "Annuleer",
+    //"MenuManageWeaponButtonYes": "Koop voor {0}$",
+
+    "NoMoney": "Je hebt niet genoeg geld",
+    "AmmoIsFull": "Je kan de lader niet gebruiken hij is vol",
+    "IncorretWeapon": "Deze lader werkt niet op dit wapen",
+    "NeedWeaponOnHand": "Je moet een wapen vasthebben",
+
+    // Pijlen
+    "AMMO_ARROW": "Pijlen",
+    "AMMO_ARROW_DYNAMITE": "Explosieve pijlen",
+    "AMMO_ARROW_FIRE": "Vuur pijlen",
+    "AMMO_ARROW_IMPROVED": "Verbeterde pijlen",
+    "AMMO_ARROW_POISON": "Gif pijlen",
+    "AMMO_ARROW_SMALL_GAME": "Jacht pijlen",
+
+    // Pistool kogels
+    "AMMO_PISTOL": "Normale kogels",
+    "AMMO_PISTOL_EXPRESS": "Express kogels",
+    "AMMO_PISTOL_EXPRESS_EXPLOSIVE": "Explosieve kogels",
+    "AMMO_PISTOL_HIGH_VELOCITY": "Hoge snelheid kogels",
+    "AMMO_PISTOL_SPLIT_POINT": "Gespleten punt kogels",
+
+    // Revolver kogels
+    "AMMO_REVOLVER": "Normale kogels",
+    "AMMO_REVOLVER_EXPRESS": "Express kogels",
+    "AMMO_REVOLVER_EXPRESS_EXPLOSIVE": "Explosieve kogels",
+    "AMMO_REVOLVER_HIGH_VELOCITY": "Hoge snelheid kogels",
+    "AMMO_REVOLVER_SPLIT_POINT": "Gespleten punt kogels",
+
+    // Repeater kogels
+    "AMMO_REPEATER": "Normale kogels",
+    "AMMO_REPEATER_EXPRESS": "Express kogels",
+    "AMMO_REPEATER_EXPRESS_EXPLOSIVE": "Explosieve kogels",
+    "AMMO_REPEATER_HIGH_VELOCITY": "Hoge snelheid kogels",
+
+    // Rifle kogels
+    "AMMO_RIFLE": "Normale kogels",
+    "AMMO_RIFLE_EXPRESS": "Express kogels",
+    "AMMO_RIFLE_EXPRESS_EXPLOSIVE": "Explosieve kogels",
+    "AMMO_RIFLE_HIGH_VELOCITY": "Hoge snelheid kogels",
+    "AMMO_RIFLE_SPLIT_POINT": "Gespleten punt kogels",
+
+    // Shotgun patronen
+    "AMMO_SHOTGUN": "Normaal patroon",
+    "AMMO_SHOTGUN_BUCKSHOT_INCENDIARY": "Brandbaar patroon",
+    "AMMO_SHOTGUN_EXPRESS_EXPLOSIVE": "Explosief patroon",
+    "AMMO_SHOTGUN_SLUG": "Massief patroon",
+
+    // Jacht kogels
+    "AMMO_22": "Jacht kogels",
+
+    // Werpmessen
+    "AMMO_THROWING_KNIVES": "Normale messen",
+    "AMMO_THROWING_KNIVES_IMPROVED": "Verbeterde messen",
+    "AMMO_THROWING_KNIVES_POISON": "Giftige messen",
+
+    // Tomahawks
+    "AMMO_TOMAHAWK": "Normale tomahawk",
+    "AMMO_TOMAHAWK_IMPROVED": "Verbeterde tomahawk",
+    "AMMO_TOMAHAWK_HOMING": "Doelzoekend tomahawk",
+
+    "ammo_bullet_revolver": "Koop Revolver Kogels(10x {0}$)",
+    "ammo_bullet_pistol": "Koop Pistool Kogels (10x {0}$)",
+    "ammo_shotgun": "Koop Shotgun Kogels (10x {0}$)",
+    "ammo_bullet_repeater": "Koop Repeater Kogels (10x {0}$)",
+    "ammo_bullet_rifle": "Koop Rifle Kogels (10x {0}$)",
+    "ammo_bullet_varmint": "Koop Jacht Kogels (10x {0}$)"
+}
